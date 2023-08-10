@@ -22,10 +22,43 @@
 ## Установка ПО Docker
 
 ### Astra Linux
-Установить пакет `docker.io`:
+
+* Установить пакет `docker.io`:
 ```sh
 $ sudo apt install docker.io
 ```
+
+* Запустить службу `Docker`:
+```sh
+$ sudo systemctl start docker
+```
+
+* Включить автоматический запуск службы:
+```sh
+$ sudo systemctl enable docker
+```
+
+* При необходимости, разрешить работу с `Docker` непривилегированным
+пользователям. Например, для пользователя *USER_NAME*:
+```sh
+$ sudo usermod -aG docker USER_NAME
+```
+
+* Для использования `Docker` в непривилегированном (*rootless*) режиме
+(служба `Docker` запускается без прав суперпользователя, `root`):
+    1. Установить пакет `rootless-helper-astra`:
+    ```sh
+    $ sudo apt install rootless-helper-astra
+    ```
+    2. Запустить службу `Docker` от имени пользователя *USER_NAME*:
+    ```sh
+    $ sudo systemctl start rootless-docker@USER_NAME
+    ```
+    3. Включить автоматический запуск службы от имени пользователя *USER_NAME*:
+    ```sh
+    $ sudo systemctl start rootless-docker@USER_NAME
+    ```
+
 Официальная документация:
 [Установка и администрирование Docker в Astra Linux 1.7](https://wiki.astralinux.ru/pages/viewpage.action?pageId=158601444)
 
