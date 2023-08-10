@@ -68,7 +68,7 @@ $ sudo usermod -aG docker USER_NAME
 
 ### Alpine Linux
 
-* Установить пакет `docker` (находится в репозитории «community»):
+* Установить пакет `docker` (находится в [репозитории](https://wiki.alpinelinux.org/wiki/Repositories) «community»):
 ```sh
 # apk add docker
 ```
