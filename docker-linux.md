@@ -26,6 +26,7 @@
 
 ## Установка ПО Docker
 
+
 ### Astra Linux
 
 * Установить пакет `docker.io`:
@@ -91,6 +92,7 @@ $ sudo usermod -a -G docker USER_NAME
 # addgroup USER_NAME docker
 ```
 
+
 ### Ubuntu Linux
 Предпочтительно устанавливать `Docker` из официального репозитория.
 
@@ -105,7 +107,7 @@ $ sudo apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 $ sudo apt-get install ca-certificates curl gnupg lsb-release
 ```
 
-* Загрузить и добавить официальный GPG-ключ репозитория:
+* Загрузить и добавить GPG-ключ репозитория:
 ```sh
 $ sudo mkdir -p /etc/apt/keyrings
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
@@ -129,12 +131,12 @@ deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.
 
 * Обновить список пакетов:
 ```sh
-sudo apt update
+$ sudo apt update
 ```
 
 * Установить пакеты `Docker`:
 ```sh
-sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+$ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 В случае успешной установки, служба `docker` будет запущена и добавлена
@@ -169,5 +171,49 @@ docker.socket     enabled    enabled
 пользователям. Например, для пользователя *USER_NAME*:
 ```sh
 $ sudo usermod -a -G docker USER_NAME
+```
+
+
+### Проверка работоспособности `Docker`
+
+Прежде чем приступить к работе с образами **АРМ С3000**, рекомендуется
+произвести проверку `Docker` с использованием специально предназначенного
+для этой цели контейнера `hello-world`:
+
+* Убедитесь в наличии подключения к сети Интернет
+
+* Выполните команду:
+```sh
+$ sudo docker run hello-world
+```
+
+В случае правильной установки и настройки `Docker`, вывод должен быть таким:
+```
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete
+Digest: sha256:dcba6daec718f547568c562956fa47e1b03673dd010fe6ee58ca806767031d1c
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
 ```
 
