@@ -12,6 +12,14 @@
 
 
 
+## Соглашения и условные обозначения
+
+
+
+## Сокращения
+
+
+
 ## Системные требования
 Поддерживаются следующие операционные системы:
 - Astra Linux Special Edition 1.7 («Орел», «Воронеж», «Смоленск»)
@@ -94,6 +102,7 @@ $ sudo usermod -a -G docker USER_NAME
 
 
 ### Ubuntu Linux
+
 Предпочтительно устанавливать `Docker` из официального репозитория.
 
 * Прежде всего, следует удалить пакеты `Docker`, установленные из
@@ -215,5 +224,24 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
+```
+
+
+
+## Подготовка к работе
+
+* Импортировать образ в локальный репозиторий `Docker`:
+```sh
+$ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
+```
+*VERSION* в имени файла следует заменить на номер версии образа,
+с которым фактически происходит работа. Например, для версии
+`1.01.654.182`, имя файла будет выглядеть как
+`arm-s3000-astra-smolensk_1.7-1.01.654.182.tar.xz`.
+
+* Создать том `Docker` для хранения данных
+(*VOLUME_NAME* - произвольное имя тома):
+```sh
+$ sudo docker volume create VOLUME_NAME
 ```
 
