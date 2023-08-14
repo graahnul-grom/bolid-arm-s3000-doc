@@ -22,6 +22,8 @@ $ command
 
 - [x] OS name: `Astra Linux Special Edition 1.7`
 
+- [x] term: *rootless*
+
 - [ ] placeholder - cmd line param
 ```sh
 $ usermod -a -G docker USER_NAME
