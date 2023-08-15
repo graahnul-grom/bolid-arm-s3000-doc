@@ -14,7 +14,7 @@ $ command
 # command
 ```
 
-- [x] product: **АРМ С3000**, **C2000-Ethernet**
+- [x] product: **АРМ С3000**, **C2000-Ethernet**, **UPROG**
 
 - [x] software: `Docker`
 
@@ -22,15 +22,21 @@ $ command
 
 - [x] OS name: `Astra Linux Special Edition 1.7`
 
+- [x] unix user name: `root`
+
 - [x] term: *rootless*
+
+- [ ] file name, path: `/etc/apt/sources.list.d/docker.list`
+
+- [ ] placeholder - in file name
+```
+arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
+```
 
 - [ ] placeholder - cmd line param
 ```sh
 $ usermod -a -G docker USER_NAME
 ```
 
-- [ ] placeholder - in file name
-```
-arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
-```
+
 
