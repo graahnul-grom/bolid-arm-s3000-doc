@@ -254,12 +254,12 @@ $ sudo docker volume create VOLUME_NAME
 
 ```
 docker run                        \
-	--name arm-s3000              \
-	--volume VOLUME_NAME:/persist \
-	--restart=always              \
-	--publish 20080:80            \
-	--publish 20043:443           \
-	arm-s3000-astra-smolensk_1.7:VERSION
+    --name arm-s3000              \
+    --volume VOLUME_NAME:/persist \
+    --restart=always              \
+    --publish 20080:80            \
+    --publish 20043:443           \
+    arm-s3000-astra-smolensk_1.7:VERSION
 ```
 
 Команде `docker run` передаются следующие параметры:
