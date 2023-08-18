@@ -33,7 +33,7 @@
 - Alpine Linux 3.16.2
 - Ubuntu Linux 20.04 LTS («Focal Fossa»), 22.04 LTS («Jammy Jellyfish»)
 
-Для каждой из систем предоставляется свой образ `Docker`.
+Для каждой из систем предоставляется свой образ **Docker**.
 При установке на других системах рекомендуется использовать
 образ, предназначенный для `Astra Linux`.
 
@@ -48,7 +48,7 @@
 $ sudo apt install docker.io
 ```
 
-* Запустить службу `Docker`:
+* Запустить службу **Docker**:
 ```sh
 $ sudo systemctl start docker
 ```
@@ -58,19 +58,19 @@ $ sudo systemctl start docker
 $ sudo systemctl enable docker
 ```
 
-* При необходимости, разрешить работу с `Docker` непривилегированным
+* При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
 ```sh
 $ sudo usermod -a -G docker USER_NAME
 ```
 
-* Для использования `Docker` в непривилегированном (*rootless*) режиме
-(служба `Docker` запускается без прав суперпользователя, `root`):
+* Для использования **Docker** в непривилегированном (*rootless*) режиме
+(служба **Docker** запускается без прав суперпользователя, `root`):
     1. Установить пакет `rootless-helper-astra`:
     ```sh
     $ sudo apt install rootless-helper-astra
     ```
-    2. Запустить службу `Docker` от имени пользователя *USER_NAME*:
+    2. Запустить службу **Docker** от имени пользователя *USER_NAME*:
     ```sh
     $ sudo systemctl start rootless-docker@USER_NAME
     ```
@@ -90,7 +90,7 @@ $ sudo usermod -a -G docker USER_NAME
 # apk add docker
 ```
 
-* Запустить службу `Docker`:
+* Запустить службу **Docker**:
 ```sh
 # service docker start
 ```
@@ -100,7 +100,7 @@ $ sudo usermod -a -G docker USER_NAME
 # rc-update add docker boot
 ```
 
-* При необходимости, разрешить работу с `Docker` непривилегированным
+* При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
 ```sh
 # addgroup USER_NAME docker
@@ -109,9 +109,9 @@ $ sudo usermod -a -G docker USER_NAME
 
 ### Ubuntu Linux
 
-Предпочтительно устанавливать `Docker` из официального репозитория.
+Предпочтительно устанавливать **Docker** из официального репозитория.
 
-* Прежде всего, следует удалить пакеты `Docker`, установленные из
+* Прежде всего, следует удалить пакеты **Docker**, установленные из
 репозиториев Ubuntu:
 ```sh
 $ sudo apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
@@ -149,7 +149,7 @@ deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.
 $ sudo apt update
 ```
 
-* Установить пакеты `Docker`:
+* Установить пакеты **Docker**:
 ```sh
 $ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
@@ -182,7 +182,7 @@ docker.service    enabled    enabled
 docker.socket     enabled    enabled
 ```
 
-* При необходимости, разрешить работу с `Docker` непривилегированным
+* При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
 ```sh
 $ sudo usermod -a -G docker USER_NAME
@@ -192,7 +192,7 @@ $ sudo usermod -a -G docker USER_NAME
 ### Проверка работоспособности `Docker`
 
 Прежде чем приступить к работе с образами **АРМ С3000**, рекомендуется
-произвести проверку `Docker` с использованием специально предназначенного
+произвести проверку **Docker** с использованием специально предназначенного
 для этой цели контейнера `hello-world`:
 
 * Убедитесь в наличии подключения к сети Интернет
@@ -202,7 +202,7 @@ $ sudo usermod -a -G docker USER_NAME
 $ sudo docker run hello-world
 ```
 
-В случае правильной установки и настройки `Docker`, вывод должен быть таким:
+В случае правильной установки и настройки **Docker**, вывод должен быть таким:
 ```
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -236,7 +236,7 @@ For more examples and ideas, visit:
 
 ## Подготовка контейнера
 
-* Импортировать образ в локальный репозиторий `Docker`:
+* Импортировать образ в локальный репозиторий **Docker**:
 ```sh
 $ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 ```
@@ -245,7 +245,7 @@ $ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 `1.01.654.182`, имя файла будет выглядеть как
 `arm-s3000-astra-smolensk_1.7-1.01.654.182.tar.xz`.
 
-* Создать том `Docker` для хранения данных
+* Создать том **Docker** для хранения данных
 (*VOLUME_NAME* - произвольное имя тома):
 ```sh
 $ sudo docker volume create VOLUME_NAME
@@ -279,7 +279,7 @@ docker run                        \
   Перенаправление портов TCP. Соединение с портом, указанным до `:`, на локальной
   системе будет перенаправлено на порт, указанный после `:`, в контейнере.
 * `arm-s3000-astra-smolensk_1.7:VERSION`
-  Имя образа `Docker`. *VERSION* в имени файла, как и ранее,
+  Имя образа **Docker**. *VERSION* в имени файла, как и ранее,
   следует заменить на номер версии образа.
 
 После успешного запуска контейнера соединение с системой **АРМ С3000**
@@ -405,13 +405,13 @@ unknown         /dev/tty        4    1-63         console
 # docker stop arm-s3000
 ```
 
-* Удалить том `Docker` (`arm-s3000-volume` - имя тома):
+* Удалить том **Docker** (`arm-s3000-volume` - имя тома):
 
 ```
 # docker volume rm arm-s3000-volume
 ```
 
-* Удалить образ `Docker`:
+* Удалить образ **Docker**:
 
 ```
 # docker image rm arm-s3000-astra-smolensk_1.7:VERSION
