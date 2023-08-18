@@ -259,12 +259,12 @@ docker run                        \
 	--restart=always              \
 	--publish 20080:80            \
 	--publish 20043:443           \
-	arm-s3000-astra-smolensk_1.7-VERSION
+	arm-s3000-astra-smolensk_1.7:VERSION
 ```
 
 Команде `docker run` передаются следующие параметры:
 * `--name arm-s3000`
-  Произвольное имя контейнера для использования в командах docker(1).
+  Произвольное имя контейнера для использования в командах `docker(1)`.
 * `--volume VOLUME_NAME:/persist`
   Имя тома, созданного командой `docker volume create` (см. [Создание контейнера]).
 * `--restart=always`
