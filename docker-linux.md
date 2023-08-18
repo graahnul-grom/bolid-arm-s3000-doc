@@ -395,3 +395,21 @@ unknown         /dev/tty        4    1-63         console
 
 
 ## Остановка и удаление контейнера
+
+* Остановить контейнер:
+
+```
+# docker stop arm-s3000
+```
+
+* Удалить том `Docker` (`arm-s3000-volume` - имя тома):
+
+```
+# docker volume rm arm-s3000-volume
+```
+
+* Удалить образ `Docker`:
+
+```
+# docker image rm arm-s3000-astra-smolensk_1.7:VERSION
+```
