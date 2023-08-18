@@ -311,7 +311,7 @@ docker run                        \
 ```
 
 Здесь `/dev/bus/usb/001/002` указывает путь к файлу устройства ключа защиты.
-Определить этот путь позволяет утилита lsusb(8):
+Определить этот путь позволяет утилита `lsusb(8)`:
 
 ```
 $ lsusb -v
@@ -355,7 +355,7 @@ Device Descriptor:
 
 В выводе команды `lsusb -v` нужно найти запись со значение поля `iProduct`
 равным «Bolid security dongle». Поля `Bus` и `Device` этой записи позволяют
-сформировать путь к устройству. Например, для `Bus 002` и `Device 003`
+сформировать путь к файлу устройства. Например, для `Bus 002` и `Device 003`
 путь будет таким:
 
 ```
@@ -365,3 +365,29 @@ Device Descriptor:
 
 
 ## Использование преобразователей USB в RS-232 и RS-485
+
+Команде `docker run` передается параметр `--device`, указывающий путь
+к файлу используемого устройства, который определяется из вывода команд
+`lsusb(8)`, `dmesg(1)`, а также из файла `/proc/tty/drivers`:
+
+```
+$ cat /proc/tty/drivers
+
+/dev/tty        /dev/tty        5    0            system:/dev/tty
+/dev/console    /dev/console    5    1            system:console
+/dev/ptmx       /dev/ptmx       5    2            system
+/dev/vc/0       /dev/vc/0       4    0            system:vtmaster
+usbserial       /dev/ttyUSB   188    0-511        serial
+acm             /dev/ttyACM   166    0-255        serial
+serial          /dev/ttyS       4    64-95        serial
+pty_slave       /dev/pts      136    0-1048575    pty:slave
+pty_master      /dev/ptm      128    0-1048575    pty:master
+unknown         /dev/tty        4    1-63         console
+```
+
+Здесь мы видим устройство `/dev/ttyUSB`, соответственно, параметр для
+команды `docker run` будет таким: `--device=/dev/ttyUSB`.
+
+
+
+## Остановка и удаление контейнера
