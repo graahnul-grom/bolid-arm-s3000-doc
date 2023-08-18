@@ -299,15 +299,69 @@ docker run                        \
 
 
 
-## Работа с ключем безопасности
+## Работа с ключем защиты
 
-docker run \
-		--restart=always \
-	--device=/dev/bus/usb/001/002 \
-		--publish 20080:80 \
-		--publish 20043:443 \
-		--publish 20497:64497/udp \
-		--volume "$BOLID_ARM_S3000_VOL:/persist" \
-		--name "arm-s3000" \
-		arm-s3000-astra-smolensk_1.7:$VERSION
+При запуске система **АРМ С3000** происходит поиск ключа защиты, подключенного
+к порту USB. Без ключа система будет работать в демонстрационном режиме.
+Для того, чтобы ОС, запущенная в контейнере, смогла найти это устройство,
+команде `docker run` необходимо передать параметр `--device`, например:
+
 ```
+--device=/dev/bus/usb/002/003
+```
+
+Здесь `/dev/bus/usb/001/002` указывает путь к файлу устройства ключа защиты.
+Определить этот путь позволяет утилита lsusb(8):
+
+```
+$ lsusb -v
+
+Bus 002 Device 003: ID 04d8:053f Microchip Technology, Inc.
+Device Descriptor:
+  bLength 18
+  bDescriptorType 1
+  bcdUSB 2.00
+  bDeviceClass 0
+  bDeviceSubClass 0
+  bDeviceProtocol 0
+  bMaxPacketSize0 8
+  idVendor 0x04d8 Microchip Technology, Inc.
+  idProduct 0x053f
+  bcdDevice 0.02
+  iManufacturer 1 Microchip Technology Inc.
+  iProduct 2 Bolid security dongle
+  iSerial 3 0800000003F76DDE
+  bNumConfigurations 1
+  Configuration Descriptor:
+    bLength 9
+    bDescriptorType 2
+    wTotalLength 0x0029
+    bNumInterfaces 1
+    bConfigurationValue 1
+    iConfiguration 0
+    bmAttributes 0xc0
+      Self Powered
+    MaxPower 100mA
+    Interface Descriptor:
+      bLength 9
+      bDescriptorType 4
+      bInterfaceNumber 0
+      bAlternateSetting 0
+      bNumEndpoints 2
+      bInterfaceClass 3 Human Interface Device
+      bInterfaceSubClass 0
+      bInterfaceProtocol 0
+```
+
+В выводе команды `lsusb -v` нужно найти запись со значение поля `iProduct`
+равным «Bolid security dongle». Поля `Bus` и `Device` этой записи позволяют
+сформировать путь к устройству. Например, для `Bus 002` и `Device 003`
+путь будет таким:
+
+```
+/dev/bus/usb/002/003
+```
+
+
+
+## Использование преобразователей USB в RS-232 и RS-485
