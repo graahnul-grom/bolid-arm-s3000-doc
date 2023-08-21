@@ -30,6 +30,7 @@
 ## Сокращения
 
 ОС - операционная система
+<br />
 ПО - программное обеспечение
 
 
@@ -57,37 +58,37 @@ $ sudo apt install docker.io
 ```
 
 * Запустить службу **Docker**:
-```sh
+```
 $ sudo systemctl start docker
 ```
 
 * Включить автоматический запуск службы:
-```sh
+```
 $ sudo systemctl enable docker
 ```
 
 * При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
-```sh
+```
 $ sudo usermod -a -G docker USER_NAME
 ```
 
 * Для использования **Docker** в *непривилегированном* (*rootless*) режиме
 (служба **Docker** запускается без прав суперпользователя, `root`):
     1. Установить пакет `rootless-helper-astra`:
-    ```sh
+    ```
     $ sudo apt install rootless-helper-astra
     ```
     2. Запустить службу **Docker** от имени пользователя *USER_NAME*:
-    ```sh
+    ```
     $ sudo systemctl start rootless-docker@USER_NAME
     ```
     3. Включить автоматический запуск службы от имени пользователя *USER_NAME*:
-    ```sh
+    ```
     $ sudo systemctl start rootless-docker@USER_NAME
     ```
 Для запуска команд **Docker** в непривилегированном режиме следует
-использовать команду `rootlessenv`, например, `rootlessenv docker load ...`,
+использовать `rootlessenv(8)`, например, `rootlessenv docker load ...`,
 `rootlessenv docker volume create ...`, `rootlessenv docker run ...` и т.д.
 
 Официальная документация:
