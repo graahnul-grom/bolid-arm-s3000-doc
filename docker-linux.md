@@ -268,7 +268,7 @@ $ sudo docker volume create VOLUME_NAME
 Запуск производится командой:
 
 ```
-docker run                        \
+$ sudo docker run                 \
     --name arm-s3000              \
     --volume VOLUME_NAME:/persist \
     --restart=always              \
