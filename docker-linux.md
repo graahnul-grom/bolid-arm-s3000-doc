@@ -87,8 +87,8 @@ $ sudo usermod -a -G docker USER_NAME
     $ sudo systemctl start rootless-docker@USER_NAME
     ```
 Для запуска команд **Docker** в непривилегированном режиме следует
-использовать `rootlessenv(8)`, например, `rootlessenv docker load ...`,
-`rootlessenv docker volume create ...`, `rootlessenv docker run ...` и т.д.
+использовать утилиту `rootlessenv`, например, `rootlessenv docker run ...`,
+`rootlessenv docker volume create ...`, и т.д.
 
 Официальная документация:
 [Установка и администрирование Docker в Astra Linux 1.7](https://wiki.astralinux.ru/pages/viewpage.action?pageId=158601444)
