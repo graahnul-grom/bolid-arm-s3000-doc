@@ -52,7 +52,7 @@
 ### Astra Linux
 
 * Установить пакет `docker.io`:
-```sh
+```
 $ sudo apt install docker.io
 ```
 
@@ -97,23 +97,23 @@ $ sudo usermod -a -G docker USER_NAME
 ### Alpine Linux
 
 * Установить пакет `docker` (находится в [репозитории](https://wiki.alpinelinux.org/wiki/Repositories) «community»):
-```sh
+```
 # apk add docker
 ```
 
 * Запустить службу **Docker**:
-```sh
+```
 # service docker start
 ```
 
 * Включить автоматический запуск службы:
-```sh
+```
 # rc-update add docker boot
 ```
 
 * При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
-```sh
+```
 # addgroup USER_NAME docker
 ```
 
@@ -124,17 +124,17 @@ $ sudo usermod -a -G docker USER_NAME
 
 * Прежде всего, следует удалить пакеты **Docker**,
 установленные из репозиториев Ubuntu:
-```sh
+```
 $ sudo apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 * Установить необходимые пакеты:
-```sh
+```
 $ sudo apt-get install ca-certificates curl gnupg lsb-release
 ```
 
 * Загрузить и добавить GPG-ключ репозитория:
-```sh
+```
 $ sudo mkdir -p /etc/apt/keyrings
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
   | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -156,12 +156,12 @@ deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.
 ```
 
 * Обновить список пакетов:
-```sh
+```
 $ sudo apt update
 ```
 
 * Установить пакеты **Docker**:
-```sh
+```
 $ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
@@ -169,7 +169,7 @@ $ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 в автоматическую загрузку. Для проверки следует выполнить следующие
 команды и убедиться в соответствии их вывода приведённому ниже:
 
-```sh
+```
 $ systemctl status docker
 
 docker.service - Docker Application Container Engine
@@ -186,7 +186,7 @@ TriggeredBy: docker.socket
 
 ```
 
-```sh
+```
 $ systemctl list-unit-files | grep -i docker
 
 docker.service    enabled    enabled
@@ -195,7 +195,7 @@ docker.socket     enabled    enabled
 
 * При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
-```sh
+```
 $ sudo usermod -a -G docker USER_NAME
 ```
 
@@ -209,7 +209,7 @@ $ sudo usermod -a -G docker USER_NAME
 * Убедитесь в наличии подключения к сети Интернет
 
 * Выполните команду:
-```sh
+```
 $ sudo docker run hello-world
 ```
 
@@ -248,7 +248,7 @@ For more examples and ideas, visit:
 ## Подготовка контейнера
 
 * Импортировать образ в локальный репозиторий **Docker**:
-```sh
+```
 $ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 ```
 Здесь и далее, *VERSION* в имени файла следует заменить на номер
@@ -258,7 +258,7 @@ $ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 
 * Создать том **Docker** для хранения данных
 (*VOLUME_NAME* - произвольное имя тома, уникальное в пределах локальной ОС):
-```sh
+```
 $ sudo docker volume create VOLUME_NAME
 ```
 
