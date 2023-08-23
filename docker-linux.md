@@ -421,7 +421,7 @@ unknown         /dev/tty        4    1-63         console
 # docker stop arm-s3000
 ```
 
-* Удалить том **Docker** (`arm-s3000-volume` - имя тома):
+* Удалить том **Docker** (`arm-s3000-volume` — имя тома):
 
 ```
 # docker volume rm arm-s3000-volume
