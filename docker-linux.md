@@ -263,7 +263,7 @@ $ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 `arm-s3000-astra-smolensk_1.7-1.01.654.182.tar.xz`.
 
 * Создать том **Docker** для хранения данных
-(*VOLUME_NAME* - произвольное имя тома, уникальное в пределах локальной ОС):
+(*VOLUME_NAME* — произвольное имя тома, уникальное в пределах локальной ОС):
 ```
 $ sudo docker volume create VOLUME_NAME
 ```
@@ -421,7 +421,7 @@ unknown         /dev/tty        4    1-63         console
 # docker stop arm-s3000
 ```
 
-* Удалить том **Docker** (`arm-s3000-volume` — имя тома):
+* Удалить том **Docker** (`arm-s3000-volume` — —имя тома):
 
 ```
 # docker volume rm arm-s3000-volume
