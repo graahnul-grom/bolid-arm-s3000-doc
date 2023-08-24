@@ -105,5 +105,29 @@ PS> wsl --list --verbose
 
 ## Установка ПО Docker
 
-* download
-https://docs.docker.com/desktop/install/windows-install
+* download:
+  https://docs.docker.com/desktop/install/windows-install
+  **TODO**: check version?
+
+* install:
+  * `[x]` `Use WSL 2 instead of Hyper-V`
+  * autorun:
+    **TODO**: there's an entire "autorun" section in orig:
+    `[x]` in docker settings + `--restart=always` in `docker run`
+
+
+
+## Подготовка контейнера
+
+**TODO**: in `PowerShell`? in `WSL`?
+// // the same as in linux
+
+
+
+## Запуск контейнера
+// // the same as in linux
+
+
+
+## Перенаправление портов UDP
+// // the same as in linux
