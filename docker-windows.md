@@ -107,7 +107,7 @@ PS> wsl --install --distribution Ubuntu
 ```
 
 В новом окне консоли появится предложение создать
-пользователя Linux. Следует задать имя и пароль:
+пользователя Linux. Следует задать имя и пароль (пароль при вводе не отображается):
 
 ```
 Installing, this may take a few minutes...
@@ -141,11 +141,10 @@ myuser@myhost:~$
 
 ## Установка ПО Docker
 
-- download:
-  https://docs.docker.com/desktop/install/windows-install
-  **TODO**: check version?
+- Загрузить дистрибутив `Docker Desktop for Windows` со страницы
+https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
 
-- install:
+- Запустить установку:
   - `[x]` `Use WSL 2 instead of Hyper-V`
   - autorun:
     **TODO**: there's an entire "autorun" section in orig:
