@@ -10,8 +10,10 @@
 выполняющих установку и начальную настройку **АРМ С3000**
 с использованием [Docker](https://www.docker.io)
 в операционных системах Windows.
+
 - **TODO**: exe runs - as admin
 - **TODO**: all `PS>` commands - in admin `PS`.
+
 
 
 ## Соглашения и условные обозначения
@@ -30,7 +32,6 @@
 ## Сокращения
 
 ОС — операционная система<br />
-ПК — персональный компьютер<br />
 ПО — программное обеспечение
 
 
@@ -52,7 +53,6 @@
 - control panel->programs and features->turn windows features on or off
   - [x] virt machine platform
   - [x] wsl
-- a note: all subsequent `PS>` cmds => in administrative `PowerShell`
   
 ### NB
 ```
@@ -146,8 +146,8 @@ myuser@myhost:~$
 - Загрузить дистрибутив `Docker Desktop for Windows` со страницы
 https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
 
-- Выполнить установку, выбрав параметр `Use WSL 2 instead of Hyper-V`
-- Выполнить установку, выбрав параметр `Use WSL 2 instead of Hyper-V`
+- Выполнить установку, включив параметр `Use WSL 2 instead of Hyper-V`
+  в окне `Configuration` программы установки.
 
 - autorun:
     - **TODO**: there's an entire "autorun" section in orig:
@@ -176,7 +176,6 @@ PS> docker volume create VOLUME_NAME
 
 ## Запуск контейнера
 // // as in linux, BUT: use `.bat` file (NB: ` ^` for breaking long lines)
-NB: error in orig: don't close `PS` console!
 
 Для запуска контейнера удобнее всего поместить команду `docker run`
 в файл `BAT` следующего вида (`^` используется для переноса длинных строк)
@@ -213,6 +212,8 @@ echo off
 2023.08.25 17:20:59.746 MAIN [INFO]: Service gate entered RUNNING state (by JSON RPC)
 2023.08.25 17:20:59.748 MAIN [INFO]: Service nginx entered RUNNING state (IMMEDIATELY)
 ```
+
+**NB**: error in *orig manual*: don't close `PS` console!
 
 Приведенный выше вывод команды говорит об успешном запуске контейнера.
 Теперь соединение с системой **АРМ С3000** возможно на всех сетевых
