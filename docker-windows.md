@@ -76,7 +76,7 @@ State       : Enabled
 PS> wsl --update
 ```
 
-- Установить значение версии `WSL` по умолчанию:
+- Установить значение версии `WSL`:
 ```
 PS> wsl --set-default-version 2
 ```
