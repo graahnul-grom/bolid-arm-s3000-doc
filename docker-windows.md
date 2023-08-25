@@ -46,25 +46,26 @@
 
 ## Подготовка среды WSL
 
-*
+* Убедиться в наличии подключения к сети Интернет
+
+* Перед началом работы рекомендуется запустить обновление:
 ```
 PS> wsl --update
 ```
 
-*
+* Установить значение версии `WSL` по умолчанию:
 ```
 PS> wsl --set-default-version 2
 ```
 
-*
+* Убедиться, что значение установлено:
 ```
 PS> wsl --status
 Версия по умолчанию: 2
 ...
-...
 ```
 
-*
+* Вывести список доступных образов `WSL`:
 ```
 PS> wsl --list --online
 
@@ -78,12 +79,15 @@ Ubuntu-16.04    Ubuntu 16.04 LTS
 Ubuntu-18.04    Ubuntu 18.04 LTS
 Ubuntu-20.04    Ubuntu 20.04 LTS
 ```
+Далее будет ипользоваться образ `Ubuntu`.
 
-*
+* Запустить установку образа:
 ```
 PS> wsl --install --distribution Ubuntu
 ```
-// // in another console window:
+
+**TODO**: в новом окне консоли:
+
 ```
 Installing, this may take a few minutes...
 Please create a default UNIX user account. The username does not need to match your Windows username.
@@ -93,7 +97,7 @@ New password:
 Retype new password:
 ```
 
-*
+* Проверить успешность установки и запуска образа:
 ```
 PS> wsl --list --verbose
 
