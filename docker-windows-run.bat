@@ -1,4 +1,4 @@
-echo off
+@echo off
 
 docker run ^
     --name arm-s3000 ^

@@ -177,7 +177,23 @@ PS> docker volume create VOLUME_NAME
 ## Запуск контейнера
 // // as in linux, BUT: use `.bat` file (NB: ` ^` for breaking long lines)
 NB: error in orig: don't close `PS` console!
+
+Для запуска контейнера удобнее всего поместить команду `docker run`
+в файл `BAT` следующего вида (`^` используется для переноса длинных строк)
+и запустить его:
+
 ```
+PS> cat docker-windows-run.bat
+
+@echo off
+docker run ^
+    --name arm-s3000 ^
+    --volume VOLUME_NAME:/persist ^
+    --restart=always ^
+    --publish 20080:80 ^
+    --publish 20043:443 ^
+    arm-s3000-astra-smolensk_1.7:1.01.654.182
+
 PS> .\docker-windows-run.bat
 
 echo off
@@ -197,6 +213,11 @@ echo off
 2023.08.25 17:20:59.746 MAIN [INFO]: Service gate entered RUNNING state (by JSON RPC)
 2023.08.25 17:20:59.748 MAIN [INFO]: Service nginx entered RUNNING state (IMMEDIATELY)
 ```
+
+Приведенный выше вывод команды говорит об успешном запуске контейнера.
+Теперь соединение с системой **АРМ С3000** возможно на всех сетевых
+интерфейсах и портах, указанных выше, например:
+`http://127.0.0.1:20080` или `https://127.0.0.1:20043`.
 
 
 
