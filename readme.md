@@ -19,7 +19,7 @@ WIP:
 
 [Соглашения и условные обозначения](conventions.md) [ obsolete ]
 <br />
-[АРМ С3000: установка образов Docker в ОС Linux](docker-linux.md) [ complete ]
+[АРМ С3000: установка образов Docker в ОС Linux](docker-linux.md) [ completed ]
 <br />
 [АРМ С3000: установка образов Docker в ОС Windows](docker-windows.md)
 
