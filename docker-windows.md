@@ -45,7 +45,11 @@
 
 
 
-## Подготовка среды WSL
+## Подготовка к работе
+
+
+
+## Установка дистрибутива Linux в WSL
 
 - Убедиться в наличии подключения к сети Интернет
 
@@ -66,7 +70,7 @@ PS> wsl --status
 ...
 ```
 
-- Вывести список доступных дистрибутивов `WSL`:
+- Вывести список доступных дистрибутивов:
 ```
 PS> wsl --list --online
 
@@ -81,28 +85,40 @@ Ubuntu-18.04    Ubuntu 18.04 LTS
 Ubuntu-20.04    Ubuntu 20.04 LTS
 ```
 
-- Использоваться будет дистрибутив `Ubuntu`. Запустить установку:
+- Использоваться будет `Ubuntu`; запустить установку:
 ```
 PS> wsl --install --distribution Ubuntu
 ```
 
-**TODO**: в новом окне консоли:
+В новом окне консоли появится предложение создать
+пользователя Linux. Следует задать имя и пароль:
 
 ```
 Installing, this may take a few minutes...
 Please create a default UNIX user account. The username does not need to match your Windows username.
 For more information visit: https://aka.ms/wslusers
-Enter new UNIX username: bot
+Enter new UNIX username: myuser
 New password:
 Retype new password:
 ```
 
-- Проверить успешность установки дистрибутива и его работы:
+- Проверить успешность установки дистрибутива и его работы
+командой `wsl --list --verbose`, а также непосредственным запуском,
+указав имя дистрибутива в качестве команды (`Ubuntu`):
 ```
 PS> wsl --list --verbose
 
   NAME      STATE           VERSION
 * Ubuntu    Running         2
+```
+
+```
+PS> Ubuntu
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+myuser@myhost:~$
 ```
 
 
