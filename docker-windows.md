@@ -40,12 +40,28 @@
 - Windows 11 Home, Pro, Enterprise, Education версии 21H1 (сборка 19044) и выше
 - WSL (Windows Subsystem for Linux) версии 2
 - 64-разрядный процессор с поддержкой SLAT
-- 4 Гб оперативной памяти
+- не менее 4 Гб оперативной памяти
 - включенная поддержка аппаратной виртуализации в BIOS
 
 
 
 ## Подготовка к работе
+
+- [x] virt tech in BIOS (chk in task mgr)
+- control panel->programs and features->turn windows features on or off
+  - [x] virt machine platform
+  - [x] wsl
+  
+### NB
+```
+PS adm> Get-WindowsOptionalFeature -Online
+
+FeatureName : Microsoft-Windows-Subsystem-Linux
+State       : Enabled
+
+FeatureName : VirtualMachinePlatform
+State       : Enabled
+```
 
 
 
