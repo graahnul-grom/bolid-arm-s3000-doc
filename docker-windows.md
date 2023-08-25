@@ -10,7 +10,8 @@
 выполняющих установку и начальную настройку **АРМ С3000**
 с использованием [Docker](https://www.docker.io)
 в операционных системах Windows.
-
+- **TODO**: exe runs - as admin
+- **TODO**: all `PS>` commands - in admin `PS`.
 
 
 ## Соглашения и условные обозначения
@@ -175,6 +176,27 @@ PS> docker volume create VOLUME_NAME
 
 ## Запуск контейнера
 // // as in linux, BUT: use `.bat` file (NB: ` ^` for breaking long lines)
+NB: error in orig: don't close `PS` console!
+```
+PS> .\docker-windows-run.bat
+
+echo off
+2023.08.25 17:20:49.953 MAIN [INFO]: Start all services...
+2023.08.25 17:20:50.622 MAIN [INFO]: Service container_init exited with: 0 (EXIT OK)
+2023.08.25 17:20:50.623 MAIN [INFO]: Service container_init entered RUNNING state (by EXIT OK)
+2023.08.25 17:20:53.632 MAIN [INFO]: Service postgresql entered RUNNING state (by time 3.0)
+2023.08.25 17:20:54.346 MAIN [INFO]: Service db_update exited with: 0 (EXIT OK)
+2023.08.25 17:20:54.346 MAIN [INFO]: Service db_update entered RUNNING state (by EXIT OK)
+2023.08.25 17:20:56.608 MAIN [INFO]: Service adapter entered RUNNING state (by JSON RPC)
+2023.08.25 17:20:56.617 MAIN [INFO]: Service config_service entered RUNNING state (IMMEDIATELY)
+2023.08.25 17:20:56.617 MAIN [INFO]: Service log_service entered RUNNING state (IMMEDIATELY)
+2023.08.25 17:20:56.617 MAIN [INFO]: Service cert_mgr entered RUNNING state (IMMEDIATELY)
+2023.08.25 17:20:57.081 MAIN [INFO]: Service device_info entered RUNNING state (by JSON RPC)
+2023.08.25 17:20:57.087 MAIN [INFO]: Service auth entered RUNNING state (by JSON RPC)
+2023.08.25 17:20:59.029 MAIN [INFO]: Service notificator entered RUNNING state (by JSON RPC)
+2023.08.25 17:20:59.746 MAIN [INFO]: Service gate entered RUNNING state (by JSON RPC)
+2023.08.25 17:20:59.748 MAIN [INFO]: Service nginx entered RUNNING state (IMMEDIATELY)
+```
 
 
 
