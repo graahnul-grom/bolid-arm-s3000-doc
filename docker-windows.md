@@ -166,8 +166,9 @@ PS> docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 Например, для версии `1.01.654.182`, имя файла будет выглядеть как
 `arm-s3000-astra-smolensk_1.7-1.01.654.182.tar.xz`.
 
-- Создать том **Docker** для хранения данных
-(*VOLUME_NAME* — произвольное имя тома, уникальное в пределах локальной ОС):
+- Создать том **Docker** для хранения данных. `arm-s3000-volume` в команде —
+произвольное имя тома, уникальное в пределах локальной ОС:
+
 ```
 PS> docker volume create VOLUME_NAME
 ```
@@ -175,11 +176,9 @@ PS> docker volume create VOLUME_NAME
 
 
 ## Запуск контейнера
-// // as in linux, BUT: use `.bat` file (NB: ` ^` for breaking long lines)
 
 Для запуска контейнера удобнее всего поместить команду `docker run`
-в файл `BAT` следующего вида (`^` используется для переноса длинных строк)
-и запустить его:
+в файл `BAT` (`^` используется для переноса строки):
 
 ```
 PS> cat docker-windows-run.bat
@@ -192,10 +191,28 @@ docker run ^
     --publish 20080:80 ^
     --publish 20043:443 ^
     arm-s3000-astra-smolensk_1.7:1.01.654.182
+```
 
+Команде `docker run` передаются следующие параметры:
+* `--name arm-s3000`
+  Произвольное имя контейнера для использования в командах `docker(1)`.
+* `--volume VOLUME_NAME:/persist`
+  Имя тома (*VOLUME_NAME*), созданного командой `docker volume create`
+  (см. раздел «Подготовка контейнера» выше).
+  `/persist` — папка в контейнере, где будет cмонтирован том.
+* `--restart=always`
+  Автоматический перезапуск контейнера в случае завершения его работы.
+* `--publish 20080:80 --publish 20043:443`
+  Перенаправление портов TCP. Соединение с портом, указанным до `:`, на локальной
+  системе будет перенаправлено на порт, указанный после `:`, в контейнере.
+* `arm-s3000-astra-smolensk_1.7:VERSION`
+  Имя образа **Docker**.
+
+Запустить файл `BAT`:
+
+```
 PS> .\docker-windows-run.bat
 
-echo off
 2023.08.25 17:20:49.953 MAIN [INFO]: Start all services...
 2023.08.25 17:20:50.622 MAIN [INFO]: Service container_init exited with: 0 (EXIT OK)
 2023.08.25 17:20:50.623 MAIN [INFO]: Service container_init entered RUNNING state (by EXIT OK)
@@ -213,12 +230,12 @@ echo off
 2023.08.25 17:20:59.748 MAIN [INFO]: Service nginx entered RUNNING state (IMMEDIATELY)
 ```
 
-**NB**: error in *orig manual*: don't close `PS` console!
-
 Приведенный выше вывод команды говорит об успешном запуске контейнера.
 Теперь соединение с системой **АРМ С3000** возможно на всех сетевых
 интерфейсах и портах, указанных выше, например:
 `http://127.0.0.1:20080` или `https://127.0.0.1:20043`.
+
+**NB**: error in *orig manual*: don't close `PS` console!
 
 
 
