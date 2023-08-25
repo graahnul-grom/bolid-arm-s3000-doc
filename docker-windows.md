@@ -45,12 +45,13 @@
 
 
 
-## Подготовка к работе
+## Подготовка к работе: **TODO**
 
 - [x] virt tech in BIOS (chk in task mgr)
 - control panel->programs and features->turn windows features on or off
   - [x] virt machine platform
   - [x] wsl
+- a note: all subsequent `PS>` cmds => in administrative `PowerShell`
   
 ### NB
 ```
@@ -139,16 +140,17 @@ myuser@myhost:~$
 
 
 
-## Установка ПО Docker
+## Установка ПО Docker: **TODO**
 
 - Загрузить дистрибутив `Docker Desktop for Windows` со страницы
 https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
 
-- Запустить установку:
-  - `[x]` `Use WSL 2 instead of Hyper-V`
-  - autorun:
-    **TODO**: there's an entire "autorun" section in orig:
-    `[x]` in docker settings + `--restart=always` in `docker run`
+- Выполнить установку, выбрав параметр `Use WSL 2 instead of Hyper-V`
+- Выполнить установку, выбрав параметр `Use WSL 2 instead of Hyper-V`
+
+- autorun:
+    - **TODO**: there's an entire "autorun" section in orig:
+    - `[x]` in docker settings + `--restart=always` in `docker run`
 
 
 
@@ -172,9 +174,9 @@ PS> docker volume create VOLUME_NAME
 
 
 ## Запуск контейнера
-// // the same as in linux
+// // as in linux, BUT: use `.bat` file (NB: ` ^` for breaking long lines)
 
 
 
 ## Перенаправление портов UDP
-// // the same as in linux
+// // as in linux
