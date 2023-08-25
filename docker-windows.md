@@ -154,8 +154,20 @@ https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
 
 ## Подготовка контейнера
 
-**TODO**: in `PowerShell`? in `WSL`?
-// // the same as in linux
+- Импортировать образ в локальный репозиторий **Docker**:
+```
+PS> docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
+```
+Здесь и далее, *VERSION* в имени файла следует заменить на номер
+версии образа, с которым фактически происходит работа.
+Например, для версии `1.01.654.182`, имя файла будет выглядеть как
+`arm-s3000-astra-smolensk_1.7-1.01.654.182.tar.xz`.
+
+- Создать том **Docker** для хранения данных
+(*VOLUME_NAME* — произвольное имя тома, уникальное в пределах локальной ОС):
+```
+PS> docker volume create VOLUME_NAME
+```
 
 
 
