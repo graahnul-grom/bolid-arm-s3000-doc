@@ -25,7 +25,8 @@
   а также для примеров выполнения и вывода команд.
 - Команды, запускаемые в `Windows PowerShell` предваряются
   приглашением командной строки вида `PS>`.
-- **TODO**: gui breadcrumbs
+- **TODO**: win gui breadcrumbs
+- **TODO**: web interface breadcrumbs
 
 
 
@@ -53,7 +54,7 @@
 - control panel->programs and features->turn windows features on or off
   - [x] virt machine platform
   - [x] wsl
-  
+
 ### NB
 ```
 PS adm> Get-WindowsOptionalFeature -Online
@@ -84,6 +85,7 @@ PS> wsl --set-default-version 2
 - Убедиться, что значение установлено:
 ```
 PS> wsl --status
+
 Версия по умолчанию: 2
 ...
 ```
@@ -150,8 +152,8 @@ https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
   в окне `Configuration` программы установки.
 
 - autorun:
-    - **TODO**: there's an entire "autorun" section in orig:
-    - `[x]` in docker settings + `--restart=always` in `docker run`
+  - **TODO**: there's an entire "autorun" section in orig:
+  - `[x]` in docker settings + `--restart=always` in `docker run`
 
 
 
@@ -170,7 +172,7 @@ PS> docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 произвольное имя тома, уникальное в пределах локальной ОС:
 
 ```
-PS> docker volume create VOLUME_NAME
+PS> docker volume create arm-s3000-volume
 ```
 
 
@@ -230,7 +232,7 @@ PS> .\docker-windows-run.bat
 2023.08.25 17:20:59.748 MAIN [INFO]: Service nginx entered RUNNING state (IMMEDIATELY)
 ```
 
-Приведенный выше вывод команды говорит об успешном запуске контейнера.
+Вывод команды, подобный приведенному выше, говорит об успешном запуске контейнера.
 Теперь соединение с системой **АРМ С3000** возможно на всех сетевых
 интерфейсах и портах, указанных выше, например:
 `http://127.0.0.1:20080` или `https://127.0.0.1:20043`.
