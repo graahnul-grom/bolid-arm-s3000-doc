@@ -17,7 +17,7 @@ https://partners.bolid.ru/forum/forum_25730.html
 WIP:
 <br />
 
-[Соглашения и условные обозначения](conventions.md) [ obsolete ]
+[Соглашения и условные обозначения](conventions.md)
 <br />
 [АРМ С3000: установка образов Docker в ОС Linux](docker-linux.md) [ completed ]
 <br />

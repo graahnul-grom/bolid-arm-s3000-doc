@@ -2,8 +2,6 @@
 
 # Соглашения и условные обозначения
 
-## Cases
-
 - [x] cmd line - non-root
 ```sh
 $ command
@@ -14,29 +12,33 @@ $ command
 # command
 ```
 
-- [x] product: **АРМ С3000**, **C2000-Ethernet**, **UPROG**
+- [x] cmd line - Windows Power Shell
+```
+PS> command
+```
 
-- [x] software: `Docker`
+- [x] product - hadware: **АРМ С3000**, **C2000-Ethernet**
 
-- [x] package name: `docker.io`
+- [x] product - software: **Docker**, **UPROG**
+
+- [x] Linux package name: `docker.io`
 
 - [x] OS name: `Astra Linux Special Edition 1.7`
+
+- [x] OS name mentions in text: no formatting: Linux, Windows
 
 - [x] unix user name: `root`
 
 - [x] term: *rootless*
 
-- [ ] file name, path: `/etc/apt/sources.list.d/docker.list`
+- [x] file name, path: `docker-windows-run.bat`, `/etc/apt/sources.list.d/docker.list`
 
-- [ ] placeholder - in file name
-```
-arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
-```
+- [ ] placeholder - in text: *VERSION*
 
-- [ ] placeholder - cmd line param
+- [ ] placeholder - in file name: `arm-s3000-astra-smolensk_1.7-VERSION.tar.xz`
+
+- [ ] placeholder - in command:
 ```sh
 $ usermod -a -G docker USER_NAME
 ```
-
-
 
