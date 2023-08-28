@@ -143,10 +143,6 @@ https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
 - Выполнить установку, включив параметр `Use WSL 2 instead of Hyper-V`
   в окне `Configuration` программы установки.
 
-- autorun:
-  - **TODO**: there's an entire "autorun" section in orig:
-  - `[x]` in docker settings + `--restart=always` in `docker run`
-
 
 
 ## Подготовка контейнера
