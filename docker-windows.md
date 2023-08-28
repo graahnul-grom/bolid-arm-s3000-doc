@@ -135,7 +135,7 @@ myuser@myhost:~$
 
 
 
-## Установка ПО Docker: **TODO**
+## Установка ПО Docker
 
 - Загрузить дистрибутив `Docker Desktop for Windows` со страницы
 https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
@@ -197,7 +197,7 @@ docker run ^
 * `arm-s3000-astra-smolensk_1.7:VERSION`<br />
   Имя образа **Docker**. Про `VERSION` см. раздел «Подготовка контейнера» выше.
 
-Запустить файл `BAT`:
+Запустить пакетный файл (находится в текущей папке) на выполнение:
 
 ```
 PS> .\docker-windows-run.bat
@@ -219,7 +219,7 @@ PS> .\docker-windows-run.bat
 2023.08.25 17:20:59.748 MAIN [INFO]: Service nginx entered RUNNING state (IMMEDIATELY)
 ```
 
-Вывод команды, подобный приведенному выше, говорит об успешном запуске контейнера.
+Вывод команды, подобный приведенному, говорит об успешном запуске контейнера.
 
 Теперь соединение с системой **АРМ С3000** возможно на всех сетевых
 интерфейсах и портах, указанных выше, например:
