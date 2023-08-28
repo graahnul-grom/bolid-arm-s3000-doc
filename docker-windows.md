@@ -25,7 +25,7 @@
   а также для примеров выполнения и вывода команд.
 - Команды, запускаемые в `Windows PowerShell` предваряются
   приглашением командной строки вида `PS>`.
-- **TODO**: win gui breadcrumbs
+- **TODO**: win gui breadcrumbs (currently: `->`)
 - **TODO**: web interface breadcrumbs
 
 
@@ -48,23 +48,13 @@
 
 
 
-## Подготовка к работе: **TODO**
+## Подготовка к работе:
 
-- [x] virt tech in BIOS (chk in task mgr)
-- control panel->programs and features->turn windows features on or off
-  - [x] virt machine platform
-  - [x] wsl
+- Включить аппаратную виртуализацию в настройках BIOS
 
-### NB
-```
-PS adm> Get-WindowsOptionalFeature -Online
-
-FeatureName : Microsoft-Windows-Subsystem-Linux
-State       : Enabled
-
-FeatureName : VirtualMachinePlatform
-State       : Enabled
-```
+- Установить компоненты «Платформа виртуальной машины» и «Подсистема Windows для Linux»
+  в панели управления: Программы и компоненты -> Включение или отключение компонентов Windows
+  (**TODO**: check case: Programs and features -> Turn Windows features on or off).
 
 
 
