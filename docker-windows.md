@@ -177,7 +177,7 @@ PS> cat docker-windows-run.bat
 @echo off
 docker run ^
     --name arm-s3000 ^
-    --volume VOLUME_NAME:/persist ^
+    --volume arm-s3000-volume:/persist ^
     --restart=always ^
     --publish 20080:80 ^
     --publish 20043:443 ^
@@ -187,8 +187,8 @@ docker run ^
 Команде `docker run` передаются следующие параметры:
 * `--name arm-s3000`
   Произвольное имя контейнера для использования в командах `docker(1)`.
-* `--volume VOLUME_NAME:/persist`
-  Имя тома (*VOLUME_NAME*), созданного командой `docker volume create`
+* `--volume arm-s3000-volume:/persist`
+  Имя тома, созданного командой `docker volume create`
   (см. раздел «Подготовка контейнера» выше).
   `/persist` — папка в контейнере, где будет cмонтирован том.
 * `--restart=always`
