@@ -56,7 +56,7 @@
 
 - Установить компоненты «Платформа виртуальной машины» и «Подсистема Windows для Linux»
   в панели управления: Программы и компоненты -> Включение или отключение компонентов Windows
-  (**TODO**: check case: Programs and features -> Turn Windows features on or off).
+  (Programs and Features -> Turn Windows features on or off).
 
 
 
