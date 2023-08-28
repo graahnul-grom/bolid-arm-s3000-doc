@@ -1,5 +1,9 @@
 @echo off
-
+::
+:: docker-windows-run.bat: пакетный файл запуска контейнера Docker
+::
+:: Примечание: символ ^ используется для переноса строк
+::
 docker run ^
     --name arm-s3000 ^
     --volume VOLUME_NAME:/persist ^

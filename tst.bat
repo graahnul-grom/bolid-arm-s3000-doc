@@ -1,5 +1,11 @@
 @echo off
 
-docker ^
-  volume ^
-  ls
+::
+:: a comment
+::
+
+dir
+
+rem docker ^
+rem   volume ^
+rem   ls
