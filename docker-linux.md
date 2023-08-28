@@ -339,38 +339,11 @@ $ lsusb -v
 Bus 002 Device 003: ID 04d8:053f Microchip Technology, Inc.
 Device Descriptor:
   bLength 18
-  bDescriptorType 1
-  bcdUSB 2.00
-  bDeviceClass 0
-  bDeviceSubClass 0
-  bDeviceProtocol 0
-  bMaxPacketSize0 8
-  idVendor 0x04d8 Microchip Technology, Inc.
-  idProduct 0x053f
-  bcdDevice 0.02
-  iManufacturer 1 Microchip Technology Inc.
+  ...
+  ...
   iProduct 2 Bolid security dongle
-  iSerial 3 0800000003F76DDE
-  bNumConfigurations 1
-  Configuration Descriptor:
-    bLength 9
-    bDescriptorType 2
-    wTotalLength 0x0029
-    bNumInterfaces 1
-    bConfigurationValue 1
-    iConfiguration 0
-    bmAttributes 0xc0
-      Self Powered
-    MaxPower 100mA
-    Interface Descriptor:
-      bLength 9
-      bDescriptorType 4
-      bInterfaceNumber 0
-      bAlternateSetting 0
-      bNumEndpoints 2
-      bInterfaceClass 3 Human Interface Device
-      bInterfaceSubClass 0
-      bInterfaceProtocol 0
+  ...
+  ...
 ```
 
 В выводе команды `lsusb -v` нужно найти запись со значение поля `iProduct`
