@@ -35,10 +35,17 @@ PS> command
 
 - [ ] placeholder - in text: *VERSION*
 
-- [ ] placeholder - in file name: `arm-s3000-astra-smolensk_1.7-VERSION.tar.xz`
+- [ ] placeholder - in file name (follow fname fmt): `arm-s3000-astra-smolensk_1.7-VERSION.tar.xz`
 
 - [ ] placeholder - in command:
 ```sh
 $ usermod -a -G docker USER_NAME
 ```
 
+- [x] note - attention: **Внимание:**
+
+- [ ] win gui breadcrumbs:<br />
+  Программы и компоненты -> Включение или отключение компонентов Windows<br />
+  Programs and Features -> Turn Windows features on or off
+
+- [ ] web interface breadcrumbs<br />
