@@ -3,12 +3,12 @@
 # Соглашения и условные обозначения
 
 - [x] cmd line - non-root
-```sh
+```
 $ command
 ```
 
 - [x] cmd line - root
-```sh
+```
 # command
 ```
 
@@ -38,7 +38,7 @@ PS> command
 - [ ] placeholder - in file name (follow fname fmt): `arm-s3000-astra-smolensk_1.7-VERSION.tar.xz`
 
 - [ ] placeholder - in command:
-```sh
+```
 $ usermod -a -G docker USER_NAME
 ```
 
