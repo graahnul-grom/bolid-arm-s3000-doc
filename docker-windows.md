@@ -235,7 +235,9 @@ PS> .\docker-windows-run.bat
 
 
 
-## Перенаправление портов UDP - **TODO**: port spec. in arm-s3000 web iface
+## Перенаправление портов UDP
+
+**TODO**: port spec in arm-s3000 web interface
 
 Перенаправление портов UDP может потребоваться:
 1. При подключении приборов к **АРМ С3000** через устройство **С2000-Ethernet**
