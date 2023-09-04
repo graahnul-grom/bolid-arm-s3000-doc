@@ -237,8 +237,6 @@ PS> .\docker-windows-run.bat
 
 ## Перенаправление портов UDP
 
-**TODO**: port spec in arm-s3000 web interface
-
 Перенаправление портов UDP может потребоваться:
 1. При подключении приборов к **АРМ С3000** через устройство **С2000-Ethernet**
    в том случае, если в настройках **С2000-Ethernet** отключен параметр
@@ -251,5 +249,7 @@ PS> .\docker-windows-run.bat
 
 Номера портов на локальной системе могут принимать значения от 2048 до 65535.
 
-20500 - port on localhost (?)
-60500 - port on s2000-ether
+**TODO**: port spec in arm-s3000 web interface
+
+- 20500 - port on localhost (?)
+- 60500 - port on s2000-ether
