@@ -138,7 +138,7 @@ myuser@myhost:~$
 ## Установка ПО Docker
 
 - Загрузить дистрибутив `Docker Desktop for Windows` со страницы
-https://docs.docker.com/desktop/install/windows-install **TODO**: check version?
+https://docs.docker.com/desktop/install/windows-install.
 
 - Выполнить установку, включив параметр `Use WSL 2 instead of Hyper-V`
   в окне `Configuration` программы установки.
