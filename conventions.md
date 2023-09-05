@@ -45,7 +45,22 @@ $ usermod -a -G docker USER_NAME
 - [x] note - attention: **Внимание:**
 
 - [ ] win gui breadcrumbs:<br />
+
+testing
+-------
+- plain `->`:<br />
   Программы и компоненты -> Включение или отключение компонентов Windows<br />
-  Programs and Features -> Turn Windows features on or off
+  Programs and Features -> Turn Windows features on or off<br />
+
+- digraph `→`: vim: `<C-k>->`, html: `&rarr;` (rightwards arrow):<br />
+  Программы и компоненты → Включение или отключение компонентов Windows<br />
+  Programs and Features → Turn Windows features on or off<br />
+  Программы и компоненты `→` Включение или отключение компонентов Windows<br />
+  Programs and Features `→` Turn Windows features on or off<br />
+  `Программы и компоненты` → `Включение или отключение компонентов Windows`<br />
+  `Programs and Features` → `Turn Windows features on or off`<br />
+  `Программы и компоненты` `→` `Включение или отключение компонентов Windows`<br />
+  `Programs and Features` `→` `Turn Windows features on or off`<br />
 
 - [ ] web interface breadcrumbs<br />
+
