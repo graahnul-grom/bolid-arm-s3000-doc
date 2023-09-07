@@ -55,10 +55,16 @@ testing
 - digraph `→`: vim: `<C-k>->`, html: `&rarr;` (rightwards arrow):<br />
   Программы и компоненты → Включение или отключение компонентов Windows<br />
   Programs and Features → Turn Windows features on or off<br />
+
   Программы и компоненты `→` Включение или отключение компонентов Windows<br />
   Programs and Features `→` Turn Windows features on or off<br />
+
   `Программы и компоненты` → `Включение или отключение компонентов Windows`<br />
   `Programs and Features` → `Turn Windows features on or off`<br />
+
+  *`Программы и компоненты`* → *`Включение или отключение компонентов Windows`*<br />
+  *`Programs and Features`* → *`Turn Windows features on or off`*<br />
+
   `Программы и компоненты` `→` `Включение или отключение компонентов Windows`<br />
   `Programs and Features` `→` `Turn Windows features on or off`<br />
 
