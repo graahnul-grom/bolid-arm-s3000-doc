@@ -36,6 +36,16 @@ wtf:
 `s2k-eth 3.10`: screenshot captured while running <nobr>`uprog 4.1.7.13.510`</nobr>
 
 ![udp port forwarding - s2k-ethernet 3.10](s2k-eth_3.10_uprog_ss.png)
+
+wtf:
+----
+
+- `uprog`
+  - (1) `UDP порт С2000-Ethernet:         40001`
+  - (2) `UDP-порт удаленного устр-ва:     40001`
+  - (3) `UDP порт С2000-Ethernet (прием): 40070`
+  - (4) `IP-адрес:                        192.168.201.81`
+  - (5) `UDP-порт удаленного устр-ва:     40070`  
 <br />
 
 
@@ -46,3 +56,4 @@ wtf:
 `s2k-eth 3.15`: screenshot captured while running <nobr>`uprog 4.1.7.13.510`</nobr>
 
 ![udp port forwarding - s2k-ethernet 3.15](s2k-eth_3.15_uprog_ss.png)
+<br />
