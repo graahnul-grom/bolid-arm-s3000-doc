@@ -37,8 +37,10 @@ wtf:
 
 ![udp port forwarding - s2k-ethernet 3.10](s2k-eth_3.10_uprog_ss.png)
 
-wtf:
+<span style="color:red">wtf</span>:
 ----
+
+<span style="color:red">wtf</span>:<br />
 
 - `uprog`
   - (1) `UDP порт С2000-Ethernet:         40001`
