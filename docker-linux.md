@@ -368,10 +368,10 @@ Device Descriptor:
 ```
 $ cat /proc/tty/drivers
 
-/dev/tty        /dev/tty        5    0            system:/dev/tty
-/dev/console    /dev/console    5    1            system:console
+/dev/tty        /dev/tty         5  0        system:/dev/tty
+/dev/console    /dev/console     5  1        system:console
 ...
-usbserial       /dev/ttyUSB   188    0-511        serial
+usbserial       /dev/ttyUSB    188  0-511    serial
 ...
 ```
 
