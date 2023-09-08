@@ -2,6 +2,12 @@
 
 # Соглашения и условные обозначения
 
+- TODO
+  - [ ] network protocols: TCP/IP, UDP
+  - [ ] hardware protocols: USB, RS-485
+  - [ ] bolid protocols: Орион, Орион Про
+  - [ ] firmware: BIOS
+
 - [x] cmd line - non-root
 ```
 $ command
