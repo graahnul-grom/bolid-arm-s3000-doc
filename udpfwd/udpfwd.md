@@ -1,20 +1,22 @@
-# bolid-arm-s3000-doc / udp_fwd_s2k-ethernet
+# bolid-arm-s3000-doc / udpfwd
 
 # arm s3k in docker: UDP port forwarding with s2k-ethernet
 
 
 
-`docker_linux_udp_fwd_ss_orig.png`
+`docker_linux_udpfwd_ss_orig.png`
 ----------------------------------
 
 screenshot taken from the original 'linux docker' pdf document
 <br />
 <nobr>`Инструкция по установке АРМ С3000 на ОС Linux (Docker) 23_04_06.pdf`</nobr>
 
-![udp port forwarding - s2k-ethernet - old](docker_linux_udp_fwd_ss_orig.png)
+![udp port forwarding - s2k-ethernet - old](docker_linux_udpfwd_ss_orig.png)
 
 wtf:
 ----
+
+- `s2k-eth` version
 
 - `arm s3k`
   - (1) `локальный порт АРМ С3000: 64497`
