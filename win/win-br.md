@@ -14,7 +14,7 @@
 
 
 - uninstall: won't remove PostgreSQL ODBC ("psqlODBC_x64" in appwiz.cpl)
-  **TODO:** check it fixed in new version
+  **TODO:** check if it fixed in new version
 
 
 
