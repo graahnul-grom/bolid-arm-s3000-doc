@@ -1,6 +1,6 @@
-# bolid-arm-s3000-doc / windows-redmine / bug-report
+# bolid-arm-s3000-doc / win / win-br
 
-# Доработка программы установки АРМ С3000 для ОС Windows
+# bug report: Доработка программы установки АРМ С3000 для Windows
 
 
 
