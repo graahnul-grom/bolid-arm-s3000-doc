@@ -4,8 +4,9 @@
 
 
 
-Предложения, касающиеся пользовательского интерфейса программы
-установки `АРМ С3000 Service` для Windows, текстовой его части.
+Предложения, касающиеся пользовательского интерфейса
+программы установки `АРМ С3000 Service` для Windows,
+в основном, текстовой его части.
 
 
 
@@ -18,9 +19,10 @@
 
 
 ## Misc
-- uninstall: won't remove PostgreSQL ODBC ("psqlODBC_x64" in appwiz.cpl).
-  **TODO**, **TODO:** check if it get fixed in new build
-
+- uninstall: won't remove PostgreSQL ODBC
+  ("psqlODBC_x64" in appwiz.cpl).
+- uninstall: offers to remove psql, but doesn't remove it
+  if it has been manually installed
 
 
 ## Выбор режима установки (manual: 3.1, p. 5)
@@ -65,6 +67,10 @@
 *По-умолчанию*.
 
 "По умолчанию" пишется раздельно.
+
+*Пароль администратора*
+
+Обычное поле ввода (не пароль).
 
 
 
