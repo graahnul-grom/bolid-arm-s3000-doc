@@ -6,22 +6,20 @@
 
 ## github markdown => redmine markdown
 
-- code: 1 line
-`xxx` -> @xxx@
+- code: 1 line<br />
+\`xxx\` => @xxx@
 
-- code: multiline
-```
-xxx
-yyy
-```
-
-=>
-
-@xxx
+- code: multiline<br />
+\`\`\`<br />
+xxx<br />
+yyy<br />
+\`\`\`<br />
+=><br />
+@xxx<br />
 yyy@
 
--italic
-*xxx* => _xxx_
+- italic<br />
+\*xxx\* => \_xxx\_
 
 
 
