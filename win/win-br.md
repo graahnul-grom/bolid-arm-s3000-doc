@@ -22,11 +22,11 @@
 
 
 
-## Functional bugs
-- uninstall: won't remove PostgreSQL ODBC
-  ("psqlODBC_x64" in appwiz.cpl)
-- uninstall: offers to remove psql, but doesn't
-  if it has been manually installed
+## Функциональные ошибки
+- Программа удаления не удаляет PostgreSQL ODBC
+  ("psqlODBC_x64" в appwiz.cpl)
+- Программа удаления предлагает удалить (но не удаляет)
+  PostgreSQL ODBC, установленный самостоятельно
 
 
 ## Окно: Выбор режима установки (manual: 3.1, p. 5)
