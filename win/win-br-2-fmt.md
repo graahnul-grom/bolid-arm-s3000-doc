@@ -1,10 +1,31 @@
-# bolid-arm-s3000-doc / win / win-br-grp
+# bolid-arm-s3000-doc / win / win-br-2-fmt
 
-# organize win-br.md contents - bug groups for redmine
+# win-br.md contents: redmine markdown formatting
 
 
 
-## groups
+## github markdown => redmine markdown
+
+- code: 1 line
+`xxx` -> @xxx@
+
+- code: multiline
+```
+xxx
+yyy
+```
+
+=>
+
+@xxx
+yyy@
+
+-italic
+*xxx* => _xxx_
+
+
+
+## bug groups
 
 A. Функциональные ошибки
 B. Изменения элементов пользовательского интерфейс
