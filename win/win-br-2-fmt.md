@@ -6,6 +6,10 @@
 
 ## github markdown => redmine markdown
 
+- headers:<br />
+h1. header 1<br />
+h2. header 2<br />
+
 - code: 1 line<br />
 \`xxx\` => @xxx@
 
