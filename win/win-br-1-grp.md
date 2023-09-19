@@ -1,6 +1,6 @@
-# bolid-arm-s3000-doc / win / win-br-grp
+# bolid-arm-s3000-doc / win / win-br-1-grp
 
-# organize win-br.md contents into bug groups - for redmine
+# organize win-br-0.md contents into bug groups - for redmine
 
 
 

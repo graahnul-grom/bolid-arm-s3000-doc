@@ -1,6 +1,6 @@
 # bolid-arm-s3000-doc / win / win-br-2-fmt
 
-# win-br.md contents: redmine markdown formatting
+# win-br-0.md contents: redmine markdown formatting
 
 
 
@@ -22,7 +22,7 @@ yyy@
 \*xxx\* => \_xxx\_
 
 - italic: multiline<br />
-\_xxx
+\_xxx<br />
 yyy\_
 
 

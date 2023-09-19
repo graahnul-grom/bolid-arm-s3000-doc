@@ -1,4 +1,4 @@
-# bolid-arm-s3000-doc / win / win-br
+# bolid-arm-s3000-doc / win / win-br-0
 
 # bug report: Доработка программы установки АРМ С3000 для Windows
 
