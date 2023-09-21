@@ -47,17 +47,24 @@
     - s2km
     - telegram bot
     - `2ASK` s2km, 's2km 02' get date/tz from s3k
-- `2ASK` https, ssl: do we need it in quick-start?
+- https, ssl: do we need it in quick-start?
+- Использование протокола https
+  - important
+  - warn: only 1 cert in system; will overwrite
+  - generate self-signed certificate (web-interface)
+  - download generated cert file
+  - insall cert: windows - to "Trusted Root Certification
+                               Authorities certificate store")
 - Подключение устройств
   - "Line" definition (protocol + port)
     - protocol: orion, orion pro
-    - `wtf` port
+    - `wtf` port // m.b. "interface", e.g. TCP/IP, RS
 
 # 2ASK:
 - "В пожарных системах s3k может использоваться
    только для целей диспетчеризации."
   - what systems
-  - explain why
+  - should we explain why
   - `wtf` "диспетчеризация"
 
 
