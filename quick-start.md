@@ -28,6 +28,28 @@
 - 12 Штатное использование
 
 
+# TOC: WIP
+
+- Введение
+- Соглашения и условные обозначения
+- Сокращения
+- Установка ПО
+  - link:
+    - docker-linux.md
+    - docker-windows.md
+    - win.md
+- Подключение к системе
+  - localhost
+  - mention port forwarding
+  - default login/password
+- Дата и время
+  - important (correct date, time zone) for:
+    - s2km
+    - telegram bot
+    - **TODO** s2km, 's2km 02' sync their date/tz from s3k
+- **TODO** https, ssl: do we need it in quick-start?
+- Подключение устройств
+
 
 ## Аудитория
 
