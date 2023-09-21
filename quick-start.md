@@ -46,11 +46,23 @@
   - important (correct date, time zone) for:
     - s2km
     - telegram bot
-    - **TODO** s2km, 's2km 02' sync their date/tz from s3k
-- **TODO** https, ssl: do we need it in quick-start?
+    - `2ASK` s2km, 's2km 02' get date/tz from s3k
+- `2ASK` https, ssl: do we need it in quick-start?
 - Подключение устройств
+  - "Line" definition (protocol + port)
+    - protocol: orion, orion pro
+    - `wtf` port
+
+# 2ASK:
+- "В пожарных системах s3k может использоваться
+   только для целей диспетчеризации."
+  - what systems
+  - explain why
+  - `wtf` "диспетчеризация"
+
 
 
 ## Аудитория
 
 - Технические специалисты, имеющие опыт работы с системами **Bolid**.
+
