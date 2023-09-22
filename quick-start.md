@@ -49,7 +49,7 @@
     - telegram bot
     - `2ASK` s2km syncs date/tz with **s3k**
 - Использование протокола https // "защищенного соединения"
-  - important
+  - important, highly recommended (that's why it here)
   - warn: only 1 cert in system; will be overwritten
   - generate self-signed certificate (web-interface)
   - download generated cert file `2ASK` cert or chain
@@ -57,8 +57,15 @@
                                Authorities certificate store")
 - Подключение устройств
   - "Line" definition (protocol + port)
+    ```
+    Совокупность порта, через который идет обмен
+    и протокола (и его настроек).
+    Каждая линия независима от других и
+    независима от типа порта.
+    ```
     - protocol: orion, orion pro
     - `wtf` port // m.b. "interface", e.g. TCP/IP, RS
+    - `wtf` port type
 
 
 
@@ -91,6 +98,15 @@
 отсылать читателя к соответствующим документам, где
 можно будет найти более полную информацию и справочные
 данные.
+
+## Установка **s3k**
+
+Предоставляется несколько возможных вариантов
+Существует несколько возможных вариантов установки
+Подробнее см. в соответствующих документах.
+Подробнее о системных требованиях см. в соответствующих документах.
+
+## Подключение к системе
 
 <!--
 отсылая, где необходимо
