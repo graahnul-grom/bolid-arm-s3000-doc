@@ -34,6 +34,7 @@
 - Соглашения и условные обозначения
 - Сокращения
 - Установка ПО
+  - supported OS
   - link:
     - docker-linux.md
     - docker-windows.md
@@ -43,16 +44,15 @@
   - mention port forwarding
   - default login/password
 - Дата и время
-  - important (correct date, time zone) for:
+  - important for:
     - s2km
     - telegram bot
-    - `2ASK` s2km, 's2km 02' get date/tz from s3k
-- https, ssl: do we need it in quick-start?
-- Использование протокола https
+    - `2ASK` s2km syncs date/tz with **s3k**
+- Использование протокола https // "защищенного соединения"
   - important
-  - warn: only 1 cert in system; will overwrite
+  - warn: only 1 cert in system; will be overwritten
   - generate self-signed certificate (web-interface)
-  - download generated cert file
+  - download generated cert file `2ASK` cert or chain
   - insall cert: windows - to "Trusted Root Certification
                                Authorities certificate store")
 - Подключение устройств
@@ -61,7 +61,7 @@
     - `wtf` port // m.b. "interface", e.g. TCP/IP, RS
 
 # 2ASK:
-- "В пожарных системах s3k может использоваться
+- "В пожарных системах **s3k** может использоваться
    только для целей диспетчеризации."
   - what systems
   - should we explain why
@@ -81,7 +81,7 @@
 его цель: по возможности, быстрее вести читателя в курс дела,
 ознакомить с новой системой и позволить начать её эксплуатацию.
 
-Не берясь во всей полноте раскрыть здесь возможности s3k и
+Не берясь во всей полноте раскрыть здесь возможности **s3k** и
 описать параметры конфигурации, мы, тем не менее,
 выделим основные моменты, касающиеся и того, и другого.
 
@@ -90,8 +90,10 @@
 можно будет найти более полную информацию и справочные
 данные.
 
+<!--
 отсылая, где необходимо
 и уместно
 к соответствующим раздела руководства по эксплуатации
   и другим документам
+-->
 
