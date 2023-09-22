@@ -42,7 +42,8 @@
     - win.md
 - Подключение к системе
   - localhost
-  - mention port forwarding
+  - http port
+  - mention port forwarding // ?
   - default login/password
 - Дата и время
   - important for:
@@ -50,10 +51,9 @@
     - telegram bot
 - Использование защищенного соединения // was: протокола https
   - important, highly recommended (that's why it here)
-  - warn: only 1 cert in system; will be overwritten
   - generate self-signed certificate (web-interface)
   - download generated cert file `2ASK` cert or chain
-  - insall cert: windows - to "Trusted Root Certification
+  - install cert: windows - to "Trusted Root Certification
                                Authorities certificate store")
 - Подключение устройств
   - "Line" definition (protocol + port)
@@ -141,8 +141,8 @@ Alpine, Astra и Ubuntu нескольких версий.
 так и на связанные с ней устройства пультов, а также
 функционирование бота мессенджера Telegram (используется
 для рассылки уведомлений, см. "Рассылка уведомлений. Telegram").
-`2ASK` необходимо for https
-`2ASK` s2km syncs date/tz with **s3k**:
+`2ASK` необходимо for https?
+`2ASK` how s2km syncs date/tz with **s3k**:
     ```
     s2km manual - 2.2.5 - p.58:
     Корректные время и дата требуются для протоколирования событий
@@ -158,6 +158,16 @@ Alpine, Astra и Ubuntu нескольких версий.
 
 В этом разделе будет рассмотрена простейшая настройка
 **s3k** для организации безопасного соединения.
+
+Для начала необходимо создать самоподписанный сертификат.
+Для этого в web-интерфейсе следует перейти на страницу
+*`Общая настройка`* → *`SSL Сертификаты`* → *`Самоподписанный сертификат`*.
+
+
+`warn`: only 1 cert in system; will be overwritten
+`warn`: turn https on/off => system reboots (logs you out)
+`2ASK` *Сбросить*" button in web-interface: WTF "Удалить"
+`2ASK` *Битность*" button in web-interface: WTF "Удалить"
 
 <!--
 Существует несколько возможных вариантов установки.
