@@ -163,6 +163,11 @@ Alpine, Astra и Ubuntu нескольких версий.
 Для этого в web-интерфейсе следует перейти на страницу
 *`Общая настройка`* → *`SSL Сертификаты`* → *`Самоподписанный сертификат`*.
 
+params:
+- key bits
+- ip / dns
+- valid from - to
+
 
 `warn`: only 1 cert in system; will be overwritten
 `warn`: turn https on/off => system reboots (logs you out)
