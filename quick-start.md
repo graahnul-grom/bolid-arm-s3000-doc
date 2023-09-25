@@ -54,8 +54,7 @@
   - important, highly recommended (that's why it here)
   - generate self-signed certificate (web-interface)
   - download generated cert
-  - install cert: windows - to "Trusted Root Certification
-                               Authorities certificate store")
+  - install cert (Windows): to "Trusted Root Certification Authorities"
 - Подключение устройств
   - "Line" definition
 
@@ -182,16 +181,11 @@ s2km manual - 2.2.5 - p.58:
 нажав на странице *`Общая настройка`* → *`SSL Сертификаты`* →
 *`Установленный`* кнопку "Скачать цепочку".
 
-
-
-`NB` cert in chain to install: "Root CA ARM S3000"
-
-`NB` firefox: Warning: "Potential Security Risk Ahead"
-
-`2ASK` download: cert or chain
-`2ASK` download chain: install what
-
-
+Открыв скачанный файл, в списке сертификатов дважды щелкнуть левой
+кнопкой мыши тот, имя которого начинается с "Root CA ARM S3000".
+Нажать кнопку "Установить сертификат" и в качестве целевого хранилища
+указать "Доверенные корневые центры сертификации" ("Trusted Root
+Certification Authorities").
 
 <!--
 в течение которого сертификат будет считаться действующим.
