@@ -58,3 +58,5 @@ $ usermod -a -G docker USER_NAME
   *`Programs and Features`* → *`Turn Windows features on or off`*<br />
   *`Общая настройка`* → *`SSL Сертификаты`* → *`Самоподписанный сертификат`*
 
+- [ ] web interface element (e.g. button) names: «Скачать»
+
