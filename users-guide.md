@@ -29,6 +29,29 @@
 
 
 
+## TOC: original, actual content
+- 1 Описание и работа
+  - 1.1 Определения и принятые сокращения
+    - сокращения
+    - определения
+  - 1.2 Назначение системы
+    - область применения
+    - requires usb key
+    - функцинальные возможности
+    - журналы событий ("архив RS", "архив")
+    - роли ("service", "operator")
+    - область применения (рабочие места охранника, инженера, etc)
+    - подключение через ПИ, пульт, etc
+    - uprog, pprog via LAN
+  - 1.3 Характеристики системы
+    - mention of "Количества и лицензии"
+    - a note: only one connection via s2k-ethernet
+    - protocols (orion, orionpro), supported speed
+    - protocols list (from tcp/ip stack)
+  - 1.4 Требования к хостовому компьютеру
+
+
+
 ## TOC: WIP
 
 - Соглашения и условные обозначения
