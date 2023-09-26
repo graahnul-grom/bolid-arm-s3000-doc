@@ -49,6 +49,20 @@
     - protocols (orion, orionpro), supported speed
     - protocols list (from tcp/ip stack)
   - 1.4 Требования к хостовому компьютеру
+    - 1.4.1 Требования к хостовой операционной системе
+      - OS list
+    - 1.4.2 Требования к техническим характеристикам
+      - HW
+    - 1.4.3 Требования к сети
+      - pass http, https
+      - link to 'ssl setup'
+      - inet for telegram; telegram able to connect via http, socks 4/5
+      - pass udp (for s2k-ethernet)
+      - link to 'ports setup'
+  - 1.5 Требования к браузеру
+    - supported browsers list
+    - javascript required
+  - 1.6 Поставка
 
 
 
