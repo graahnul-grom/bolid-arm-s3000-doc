@@ -22,7 +22,10 @@ WIP:
 [АРМ С3000: установка образов Docker в ОС Linux](docker-linux.md)
 <br />
 [АРМ С3000: установка образов Docker в ОС Windows](docker-windows.md)
+<br />
+[АРМ С3000: установка сервиса в ОС Windows](win.md)
 
 [АРМ С3000: быстрый старт](quick-start.md)
 <br />
 [АРМ С3000: руководство по эксплуатации](users-guide.md)
+
