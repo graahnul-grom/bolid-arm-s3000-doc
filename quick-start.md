@@ -371,3 +371,21 @@ from manual, `wtf` "virt. line":
 ```
 -->
 
+# Создание линии
+
+*`Конфигурирование структуры объекта`* → *`Приборы`* →
+*`Линии и протоколы`* → *`Добавить линию`*
+
+- port
+- protocol
+- speed
+- query devices
+- timeouts
+  - manual: p.84
+  - [links to **s2k-eth** manual]()
+    - p.27 2.2.5.4 Требования и рекомендации по настройке временных параметров
+    - p.30 2.2.5.4.2 Настройка временных параметров
+  - short descr of new events requests timeout tradeoffs
+- options `OROG` not described
+  - manual: p.86
+
