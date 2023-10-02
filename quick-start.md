@@ -391,6 +391,10 @@ from manual, `wtf` "virt. line":
 - => after a while s2km should appear in device list
 
 # Добавление пользователей
+- goto *`Конфигурирование структуры объекта`* → *`Пользователи`*
+- roles
+  - service
+  - operator
 
 # Работа с конфигурациями пультов
 
@@ -407,10 +411,12 @@ from manual, `wtf` "virt. line":
   - // ? relays
 
 ## save s2km into **s3k** database
+- select *line* (with s2km)
 - select s2km
-  - add s2km to **s3k** *database*
-    -  *`Конфигурирование структуры объекта`* → *`Приборы`* →
-       *`Линии и протоколы`* → *`Сохранить в бд`*
+- add s2km to **s3k** *database*:
+- goto *`Конфигурирование структуры объекта`* → *`Приборы`* →
+       *`Линии и протоколы`*
+- button: *`Сохранить в бд`*
 
 ## Загрузка конфигурации пульта в **s3k**
 - `pprog` -> Сохранить конфигурацию в файл
