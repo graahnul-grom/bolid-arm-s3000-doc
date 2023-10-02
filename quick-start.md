@@ -413,7 +413,7 @@ from manual, `wtf` "virt. line":
 - **Внимание:**<br />
 Конфигурация, загруженная в **s3k** должна совпадать с конфигурацией пульта.
 
-## save s2km into **s3k** database
+## Сохранение пульта в базе данных **s3k**
 - select *line* (with s2km)
 - select s2km
 - add s2km to **s3k** *database*:
@@ -422,13 +422,13 @@ from manual, `wtf` "virt. line":
 - button: *`Сохранить в бд`*
 
 ## Загрузка конфигурации пульта в **s3k**
+### Чтение конфигурации из пульта: `pprog`
 - `pprog` -> Сохранить конфигурацию в файл
 - turn on *config mode*: "Войти в режим конфигурации"
 - *`Конфигурирование структуры объекта`* → *`Конфигурации`*
 - button: "Выберите файл"
 - button: "Загрузить"
 - turn off *config mode*: "Сохранить изменения в конфигурации"
-
 ### Чтение конфигурации из пульта, подключенного к **s3k**
 *optional* *one of the ways to get s2km cfg*
 - `pprog`
@@ -439,6 +439,12 @@ from manual, `wtf` "virt. line":
 - Сохранить конфигурацию в файл
   - typing s2km's password when prompted
 [link to Загрузка конфигурации пульта в **s3k**]()
+- => after applying cfg,
+     in *`Штатная работа`* → *`Состояние объекта`*
+     you should see:
+  - zones
+  - zone states
+  - zone elements
 
 ## Применение загруженной конфигурации к пульту в **s3k**
 ### Применение загруженной конфигурации к пульту
