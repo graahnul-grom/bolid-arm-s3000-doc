@@ -388,4 +388,35 @@ from manual, `wtf` "virt. line":
   - short descr of new events requests timeout tradeoffs
 - options `OROG` not described
   - manual: p.86
+- => after a while s2km should appear in device list
+
+# Добавление пользователей
+
+# Работа с конфигурациями пультов
+
+## intro
+- why we need saved s2km *config*
+  - view event log
+  - view/control
+- parts of *config* used in **s3k**
+  - zones
+  - zones' content
+  - zone groups
+  - staff, passwords
+  - // ? devices
+  - // ? relays
+
+## save s2km into **s3k** database
+- select s2km
+  - add s2km to **s3k** *database*
+    -  *`Конфигурирование структуры объекта`* → *`Приборы`* →
+       *`Линии и протоколы`* → *`Сохранить в бд`*
+
+## Загрузка конфигурации пульта в **s3k**
+- `pprog` -> Сохранить конфигурацию в файл
+- turn on *config mode*: "Войти в режим конфигурации"
+- *`Конфигурирование структуры объекта`* → *`Конфигурации`*
+- button: "Выберите файл"
+- button: "Загрузить"
+- turn off *config mode*: "Сохранить изменения в конфигурации"
 
