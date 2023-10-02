@@ -251,7 +251,7 @@ Certification Authorities").
 Далее на вкладке *`Линии и протоколы`* добавляется так называемая
 *линия* для подключения устройств - это определенный *порт* и ряд
 настроек, таких как *протокол*, скорость соединения и другие.
-[manual: line settings]()
+[link to manual: line settings]()
 
 *Порт*, задействованный в одной из линий, не может быть использован
 при создании других.
@@ -271,14 +271,17 @@ Certification Authorities").
 `2ASK` Pprog?
 - для пульта `С2000М` - не ниже 3.14 или 4.14
   (в зависимости от аппаратной версии прибора)
+  [link to s2km download page]()
 - для пульта `С2000М исп. 02` - не ниже 5.02
 
 В настройках пульта (самого прибора) необходимо установить следующие параметры:
+  [link to s2km manual]()
 - Параметры второго порта связи -> Режим: КОМПЬЮТЕР
 - Параметры второго порта связи -> Запрашивать состояния С2000М
 - Скорость
   второго порта связи
   must be == speed of *line* used to connect to s2km
+  [link to line settings]()
 
 <!--
 **s3k** работает с пультами
@@ -327,7 +330,7 @@ Certification Authorities").
 - Ip или DNS адрес C2000-Ethernet
 - UDP порт **s2k-eth**
 
-[manual: s2k-eth port settings]()
+[link to manual: s2k-eth port settings]()
 
 <!-- TODO
 UDP port forwarding
