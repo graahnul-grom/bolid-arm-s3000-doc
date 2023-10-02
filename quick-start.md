@@ -431,6 +431,9 @@ from manual, `wtf` "virt. line":
 - turn off *config mode*: "Сохранить изменения в конфигурации"
 ### Чтение конфигурации из пульта, подключенного к **s3k**
 *optional* *one of the ways to get s2km cfg*
+При невозможности подключиться к пульту в `PProg` напрямую,
+можно воспользоваться следующим способом, соединившись с пультом
+через **s3k**:
 - `pprog`
 - TCP/IP
 - ip/port of **s3k**
@@ -463,4 +466,34 @@ from manual, `wtf` "virt. line":
 - `orion` proto only
 - the same as above
 
+# Рассылка уведомлений. Telegram
+- working internet connection
+- must have a telegram account
+- [info on bots](https://core.telegram.org/bots)
+- create bot
+  - goto https://t.me/botfather (@BotFather)
+  - START
+    - a message with available commands
+  - /newbot (here on henceforth: either command or menu)
+  - enter name
+  - enter bot's *username*: must end with "bot" (NB "-" are not allowed)
+  - => "Done!" message:
+    - t.me link to bot
+    - http api access token // to control a bot // keep it secure
+- add bot in web-interface: *`Конфигурирование структуры объекта`* →
+  *`Рассылка уведомлений`* → *`Телеграм`*
+  - button: "+"
+  - enter token: "Токен бота"
+  - proxy, if required: Прокси
+  - `2ASK` Лимиты/Таймауты - disabled?
+  - greetings messages, if desired: Приветствие
+  - button: "Создать"
+- add user in web-interface
+  - select bot
+  - burger button -> Список пользователей -> user+ button
+  - `2ASK` `where tf` qr-code
+- *`Конфигурирование структуры объекта`* →
+  *`Рассылка уведомлений`* → *`Каналы уведомлений`* -> add
+- goto: telegram user settings in web-interface
+ - "Привязан к" // канал уведомлений
 
