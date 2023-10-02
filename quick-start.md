@@ -410,6 +410,9 @@ from manual, `wtf` "virt. line":
   - // ? devices
   - // ? relays
 
+- **Внимание:**<br />
+Конфигурация, загруженная в **s3k** должна совпадать с конфигурацией пульта.
+
 ## save s2km into **s3k** database
 - select *line* (with s2km)
 - select s2km
@@ -418,6 +421,8 @@ from manual, `wtf` "virt. line":
        *`Линии и протоколы`*
 - button: *`Сохранить в бд`*
 
+## Получение конфигурации пульта
+
 ## Загрузка конфигурации пульта в **s3k**
 - `pprog` -> Сохранить конфигурацию в файл
 - turn on *config mode*: "Войти в режим конфигурации"
@@ -425,4 +430,19 @@ from manual, `wtf` "virt. line":
 - button: "Выберите файл"
 - button: "Загрузить"
 - turn off *config mode*: "Сохранить изменения в конфигурации"
+
+## Применение конфигурации к пульту в **s3k**
+`PRE` [link to Загрузка конфигурации пульта в **s3k**]()
+- goto *`Конфигурирование структуры объекта`* → *`Приборы`* →
+       *`Линии и протоколы`*
+- select line
+- select s2km
+- turn on *config mode*: "Войти в режим конфигурации"
+- button: Конфигурация
+- in window:
+  - select config
+  - button: Сохранить
+- turn off *config mode*: "Сохранить изменения в конфигурации"
+
+
 
