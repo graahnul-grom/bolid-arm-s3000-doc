@@ -23,8 +23,10 @@
 - Команды, запускаемые в `Windows PowerShell` предваряются
   приглашением командной строки вида `PS>`.
 - **Внимание:** так обозначены важные замечания.
+<!--
 - **TODO**: win gui [breadcrumbs](conventions.md) (currently: `->`)
 - **TODO**: web interface breadcrumbs
+-->
 
 
 
@@ -231,16 +233,20 @@ PS> .\docker-windows-run.bat
 интерфейсах и заданных портах, например:
 `http://127.0.0.1:20080` или `https://127.0.0.1:20043`.
 
+<!--
 **TODO**: error in *orig manual*: don't close `PS` console!
+-->
 
 
 
 ## Перенаправление портов UDP
 
+<!--
 **TODO**: [need it](docker-compare-toc.md)?
 **TODO**: port spec in arm-s3000 web interface
 - 20500 - port on localhost (?)
 - 60500 - port on s2000-ether
+-->
 
 Перенаправление портов UDP может потребоваться:
 1. При подключении приборов к **АРМ С3000** через устройство **С2000-Ethernet**
