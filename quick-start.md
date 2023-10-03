@@ -35,6 +35,7 @@ src: `Инструкция по быстрому старту АРМ С3000 23_0
 
 
 
+<!--
 ## TOC: WIP
 
 - Введение
@@ -80,6 +81,7 @@ src: `Инструкция по быстрому старту АРМ С3000 23_0
     - *line*                     working on top of the `orion` proto
     - *s2km* connected to *line* working on top of the `orion pro` proto
       && if *s2km* has been *added* to **s3k** database
+-->
 
 
 
