@@ -553,7 +553,7 @@ Certification Authorities").
   - START
     - a message with available commands
   - /newbot (here on henceforth: either command or menu)
-  - enter name
+  - enter name (display name)
   - enter bot's *username*: must end with "bot" (NB "-" are not allowed)
   - => "Done!" message:
     - t.me link to bot
@@ -562,16 +562,16 @@ Certification Authorities").
   *`Рассылка уведомлений`* → *`Телеграм`*
   - button: "+"
   - enter token: "Токен бота"
-  - proxy, if required: Прокси
+  - proxy, if required: Прокси // [bolid]: **required** (won't pick up sys settings)
   - `2ASK` Лимиты/Таймауты - disabled?
   - greetings messages, if desired: Приветствие
   - button: "Создать"
 - add user in web-interface
   - select bot
   - burger button -> Список пользователей -> user+ button
-  - `2ASK` `where tf` qr-code
 - *`Конфигурирование структуры объекта`* →
   *`Рассылка уведомлений`* → *`Каналы уведомлений`* -> add
 - goto: telegram user settings in web-interface
- - "Привязан к" // канал уведомлений
+ - "Привязан к" -> канал уведомлений
+- scan QR-code or follow a link => user is "bound"
 
