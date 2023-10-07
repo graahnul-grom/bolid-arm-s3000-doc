@@ -20,6 +20,7 @@
       [UProg](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
 
       [s3kre: x.x.x yyy pNNN]() => links to s3k manual
+      [XXXre: x.x.x yyy pNNN]() => links to XXX manual
 -->
 
 <!--
@@ -282,7 +283,7 @@ Alpine, Astra и Ubuntu нескольких версий.
 Далее Осталось настроить соединение со стороны клиентского ПО.
 -->
 
-<!-- TODO other OS's => refer to s3kre -->
+<!-- TODO other OS's => refer [s3kre TODO where?]() -->
 Для ОС Windows требуется скачать и установить созданный ранее сертификат,
 нажав на странице *`Общая настройка`* → *`SSL Сертификаты`* →
 *`Установленный`* кнопку "Скачать цепочку".
@@ -360,7 +361,7 @@ Certification Authorities").
 - "Скорость" должна соответствовать выбранной скорости в установках для *линии*
   (см. раздел "Создание линии" ниже)
 <!--
-  [link to line settings]()
+  [s3kre 2.3.5.3.1.1 Параметры линий p91 ]()
   must be == speed of *line* used to connect to s2km
 -->
 
@@ -420,7 +421,7 @@ Certification Authorities").
 - IP или DNS адрес C2000-Ethernet
 - UDP порт **s2k-eth**
 
-[link to manual: s2k-eth port settings]()
+[s3kre: 2.3.5.3.2 Вкладка Порты C2000 Ethernet p105]()
 
 <!-- TODO UDP port forwarding - take from docker md files -->
 
@@ -441,10 +442,9 @@ Certification Authorities").
 - speed
 - query devices
 - timeouts
-  - manual: p.84
-  - [links to **s2k-eth** manual]()
-    - p.27 2.2.5.4 Требования и рекомендации по настройке временных параметров
-    - p.30 2.2.5.4.2 Настройка временных параметров
+  - manual: p.84 // TODO: wtf is this?
+  - [s2k-ethre 2.2.5.4 Требования и рекомендации по настройке временных параметров p27]()
+  - [s2k-ethre 2.2.5.4.2 Настройка временных параметров p30]()
   - short descr of new events requests timeout tradeoffs
 - options `OROG` not described
   - manual: p.86
