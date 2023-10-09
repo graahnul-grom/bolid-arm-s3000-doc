@@ -4,13 +4,25 @@
 
 
 
-<!-- TODO: see "SS" marks in comments => add screenshot here -->
+<!-- NOTE marks:
 
-<!-- TODO: replace
-    - **s3k** => **АРМ С3000**
+    - screenshot here
+      - in visible text: **SS**
+      - in separate 1-line comment:
+-->
+
+<!-- SS -->
+
+<!--
+
+-->
+
+<!-- NOTE replacements
+
+    - **s3k**     => **АРМ С3000**
     - **s2k-eth** => **С2000-Ethernet**
-    - **s2km** => **С2000М**
-    -             **С2000М исп. 02**
+    - **s2km**    => **С2000М**
+    -                **С2000М исп. 02**
 
     - `UProg`
       **UProg**
@@ -19,14 +31,12 @@
       **PProg**
       [UProg](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
 
-      [s3k-re x.x.x yyy pNNN]() => links to s3k manual
+      [s3k-re x.x.x yyy pNNN]()     => links to s3k manual
       [s2k-eth-re x.x.x yyy pNNN]() => links to s2k-eth manual
-      [XXX-re x.x.x yyy pNNN]() => links to XXX manual
+      [XXX-re x.x.x yyy pNNN]()     => links to XXX manual
 -->
 
-<!--
-src: `Инструкция по быстрому старту АРМ С3000 23_03_02.pdf`
--->
+<!-- src: `Инструкция по быстрому старту АРМ С3000 23_03_02.pdf` -->
 
 <!--
 ## TOC: original
@@ -448,7 +458,7 @@ Certification Authorities").
 *`Конфигурирование структуры объекта`* → *`Приборы`* → *`Порты c2000 Ethernet`*
 с такими параметрами:
 - Локальный порт **s3k**
-- IP или DNS адрес C2000-Ethernet
+- IP или DNS адрес **s2k-eth**
 - UDP порт **s2k-eth**
 
 [s3k-re 2.3.5.3.2 Вкладка Порты C2000 Ethernet p105]()
