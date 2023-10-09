@@ -20,6 +20,7 @@
       [UProg](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
 
       [s3k-re x.x.x yyy pNNN]() => links to s3k manual
+      [s2k-eth-re x.x.x yyy pNNN]() => links to s3k manual
       [XXX-re x.x.x yyy pNNN]() => links to XXX manual
 -->
 
@@ -450,8 +451,8 @@ Certification Authorities").
 - query devices
 - timeouts
   - manual: p.84 // TODO: wtf is this?
-  - [s2k-ethre 2.2.5.4 Требования и рекомендации по настройке временных параметров p27]()
-  - [s2k-ethre 2.2.5.4.2 Настройка временных параметров p30]()
+  - [s2k-eth-re 2.2.5.4 Требования и рекомендации по настройке временных параметров p27]()
+  - [s2k-eth-re 2.2.5.4.2 Настройка временных параметров p30]()
   - short descr of new events requests timeout tradeoffs
 - options `OROG` not described
   - manual: p.86
