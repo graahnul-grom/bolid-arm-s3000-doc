@@ -921,8 +921,13 @@ TODO 2ASK
   задать набор уведомлений, которые он будет получать, -
   выбрав канал уведомлений в поле "Привязан к".
 
+Результатом будет являться возможность
+соединения и работы с новым ботом
+в любом из клиентских приложений Telegram.
 
 
+
+<!--
 - [info on bots](https://core.telegram.org/bots) + bots, telegram intro (rus)?
 - create bot
   - goto https://t.me/botfather (@BotFather)
@@ -950,4 +955,5 @@ TODO 2ASK
 - goto: telegram user settings in web-interface
  - "Привязан к" -> канал уведомлений
 - scan QR-code or follow a link => user is "bound"
+-->
 
