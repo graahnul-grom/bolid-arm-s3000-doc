@@ -23,13 +23,13 @@
 
 <!-- NOTE replace:
 
-    - - => — // long
+    + - => — // long
       - vim cmd (select -> :so<CR>):
         .,$s,-,—,gc
       - sed cmd:
         sed -E -e 's/-/—/g'
 
-    - "" => «»
+    + "" => «»
       - vim cmd (NB: \v => 'very magic'):
         .,$s,\v(^| )",\1«,gc
         .,$s,"\v( |$),»\1,gc
@@ -39,24 +39,29 @@
 TESTING:
 "xxx"
 
-    - **iso**     => **ИСО Орион** // TODO give transcript on 1st use
-    - **s3k**     => **АРМ С3000** // TODO give transcript on 1st use
-    - **s2k-eth** => **С2000-Ethernet**
-    - **s2km**    => **С2000М**
-    -                **С2000М исп. 02**
-    - `Орион`     => `Орион`     // protocol
-    - `Орион Про` => `Орион Про` // protocol
+    + **iso**     => **ИСО Орион** // TODO give transcript on 1st use
+      - vim cmd (NB: \N => 'nomagic'):
+        .,$s,\M**iso**,**ИСО Орион**,gc
+      - sed cmd:
+        sed -E -e 's,\*\*iso\*\*,**ИСО Орион**,g'
 
-    - `UProg`
+    + **s3k**     => **АРМ С3000** // TODO give transcript on 1st use
+    + **s2k-eth** => **С2000-Ethernet**
+    + **s2km**    => **С2000М**
+    +                **С2000М исп. 02**
+    + `Орион`     => `Орион`     // protocol
+    + `Орион Про` => `Орион Про` // protocol
+
+    + `UProg`
       **UProg**
       [UProg](https://bolid.ru/production/orion/po-orion/po-config/uprog.html)
-    - `PProg`
+    + `PProg`
       **PProg**
       [UProg](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
 
-      [s3k-re x.x.x yyy pNNN]()     => links to s3k manual
-      [s2k-eth-re x.x.x yyy pNNN]() => links to s2k-eth manual
-      [XXX-re x.x.x yyy pNNN]()     => links to XXX manual
+    + [s3k-re x.x.x yyy pNNN]()     => links to s3k manual
+    + [s2k-eth-re x.x.x yyy pNNN]() => links to s2k-eth manual
+    + [XXX-re x.x.x yyy pNNN]()     => links to XXX manual
 -->
 
 <!-- src: `Инструкция по быстрому старту АРМ С3000 23_03_02.pdf` -->
