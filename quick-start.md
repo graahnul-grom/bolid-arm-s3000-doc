@@ -205,7 +205,7 @@ was: в течение определенного времени (~1)
 -->
 
 <!--
-## TOC: rearrange
+## TOC: rearranging
 
 - Введение
 - Соглашения и условные обозначения
@@ -229,12 +229,11 @@ was: в течение определенного времени (~1)
 - Использование защищенного соединения
 - Добавление пользователей
 - Рассылка уведомлений. Telegram
-  - intro: list actions needed
-  - КУ, фильтры
+  - intro: list actions needed // ? give section a name
+  - Канал уведомлений
   - Создание бота
   - Регистрация созданного бота в **s3k**
-  - Создание пользователя бота
-  - Привязка учетной записи (авторизация?) пользователя бота (tg user <-> bot?)
+  - Создание пользователя для работы с ботом
 -->
 
 
@@ -593,14 +592,6 @@ Certification Authorities").
 <!-- TODO Опции subsection -->
 <!-- TODO apply cfg button -->
 <!-- TODO note on web ui f##kup: click line => props, click ">" => line contents -->
-
-<!-- NOTE accent chars (stress marks)
-- made by http://russiangram.com:<br />
-1ы́3<br />
-- made by win10 char map app<br />
-ы̀́́́́́́́́́́<br />
-1ы̀́́́́́́́́́́3<br />
--->
 
 **Примечание:**<br />
 Сообщение "Добавлено максимум линий" в списке линий
@@ -1014,5 +1005,13 @@ TODO
 - goto: telegram user settings in web-interface
  - "Привязан к" -> канал уведомлений
 - scan QR-code or follow a link => user is "bound"
+-->
+
+<!-- NOTE accent chars (stress marks)
+- made by http://russiangram.com:<br />
+1ы́3<br />
+- made by win10 char map app<br />
+ы̀́́́́́́́́́́<br />
+1ы̀́́́́́́́́́́3<br />
 -->
 
