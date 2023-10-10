@@ -36,15 +36,17 @@
       - sed cmd:
         sed -E -e 's,(^| )",\1«,g' -e 's,"( |$),»\1,g'
 
-    + footnotes - reference: (~N) =>: <sup>N</sup>
+    + footnotes number N - reference: ~N~ => <sup>N</sup>
       - vim cmd:
-        .,$s,\v \~(\([0-9]+\)),<sup>\1</sup>,gc TODO doesn't work
-        .,$s,\v \~([0-9]+),<sup>\1</sup>,gc
         .,$s,\v \~([0-9]+)\~,<sup>\1</sup>,gc
       - sed cmd:
-        sed -E -e 's,(^| )",\1«,g' -e 's,"( |$),»\1,g'
+        sed -E -e 's, ~([0-9]+)~,<sup>\1</sup>,g'
 
-    + footnotes - footnote itself: ~N ~1:<br />
+    + footnotes - footnote number N itself: ~N~  OR  ~N~:<br />
+      - vim cmd:
+        .,$s,\v^\~([0-9]+)\~:,<sup>\1</sup>,gc
+      - sed cmd:
+        sed -E -e 's, ~([0-9]+)~,<sup>\1</sup>,g'
 
 TESTING:
 new: в течение определенного времени ~1~
@@ -615,8 +617,11 @@ Certification Authorities").
 Подробнее о линиях см. разделы "Параметры линий" и "Добавление линии"
 в руководстве по эксплуатации.
 
-~1:<br />
-Не более, чем `*таймаут запроса новых событий* (40 мс по умолчанию) * 127`.
+~1~:<br />
+<hr />
+<br />
+Не более, чем значение параметра *таймаут запроса новых событий*
+(40 мс по умолчанию), умноженное на 127.
 
 <!--
 TODO line properties - *config applied* param shown when:
