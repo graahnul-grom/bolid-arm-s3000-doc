@@ -36,8 +36,10 @@
       - sed cmd:
         sed -E -e 's,(^| )",\1«,g' -e 's,"( |$),»\1,g'
 
-TESTING:
-"xxx"
+    + footnotes
+      - ~N - reference, e.g. ~1
+        - markdown, html: <sup></sup>
+      - ~N - footnote itself
 
     + **iso**     => **ИСО Орион** // TODO give transcript on 1st use
       - vim cmd (NB: \N => 'nomagic'):
@@ -78,12 +80,10 @@ TESTING:
     + `Орион`     => `Орион`     // protocol
     + `Орион Про` => `Орион Про` // protocol
 
-    + `UProg`
-      **UProg**
-      [UProg](https://bolid.ru/production/orion/po-orion/po-config/uprog.html)
-    + `PProg`
-      **PProg**
-      [PProg](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
+    + **UProg**
+      [**UProg**](https://bolid.ru/production/orion/po-orion/po-config/uprog.html)
+    + **PProg**
+      [**PProg**](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
 
     + [s3k-re x.x.x yyy pNNN]()     => links to s3k manual
     + [s2k-eth-re x.x.x yyy pNNN]() => links to s2k-eth manual
@@ -286,8 +286,6 @@ TESTING:
 
 
 ## Соглашения и условные обозначения
-
-<!-- (~N) - footnote number N reference, e.g. (~1) (~2); ~N - footnote itself -->
 
 - Словом *пульт* будем обозначать устройства пультов **s2km** и
   **s2km2**, оговаривая, где это необходимо, различия между ними.
@@ -571,7 +569,7 @@ Certification Authorities").
 
 При успешном добавлении новая линия появиться в списке
 и, при установленном параметре "Включить опрос",
-в течение определенного времени (~1) - устройства, подключенные к линии.
+в течение определенного времени<sup>1</sup> - устройства, подключенные к линии.
 
 В секции "Тайминги" устанавливаются временны́е параметры для используемого порта.
 В большинстве случае достаточно оставить значения по умолчанию,
