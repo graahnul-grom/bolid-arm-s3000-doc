@@ -42,11 +42,11 @@
       - sed cmd:
         sed -E -e 's, ~([0-9]+)~,<sup>\1</sup>,g'
 
-    + footnotes - footnote number N itself: ~N~  OR  ~N~:<br />
+    + footnotes - footnote number N itself: ~N~: => **N**:
       - vim cmd:
-        .,$s,\v^\~([0-9]+)\~:,<sup>\1</sup>,gc
+        .,$s,\v^\~([0-9]+)\~:,**\1**:,gc
       - sed cmd:
-        sed -E -e 's, ~([0-9]+)~,<sup>\1</sup>,g'
+        sed -E -e 's,^~([0-9]+)~:,**\1**:,g'
 
 TESTING:
 new: в течение определенного времени ~1~
@@ -618,8 +618,6 @@ Certification Authorities").
 в руководстве по эксплуатации.
 
 ~1~:<br />
-<hr />
-<br />
 Не более, чем значение параметра *таймаут запроса новых событий*
 (40 мс по умолчанию), умноженное на 127.
 
