@@ -46,9 +46,29 @@ TESTING:
         sed -E -e 's,\*\*iso\*\*,**ИСО Орион**,g'
 
     + **s3k**     => **АРМ С3000** // TODO give transcript on 1st use
+      - vim cmd:
+        .,$s,\M**s3k**,**АРМ С3000**,gc
+      - sed cmd:
+        sed -E -e 's,\*\*s3k\*\*,**АРМ С3000**,g'
+
     + **s2k-eth** => **С2000-Ethernet**
+      - vim cmd:
+        .,$s,\M**s2k-eth**,**С2000-Ethernet**,gc
+      - sed cmd:
+        sed -E -e 's,\*\*s2k-eth\*\*,**С2000-Ethernet**,g'
+
     + **s2km**    => **С2000М**
-    +                **С2000М исп. 02**
+      - vim cmd:
+        .,$s,\M**s2km**,**С2000М**,gc
+      - sed cmd:
+        sed -E -e 's,\*\*s2km\*\*,**С2000М**,g'
+
+    + **s2km2**   => **С2000М исп. 02**
+      - vim cmd:
+        .,$s,\M**s2km2**,**С2000М исп. 02**,gc
+      - sed cmd:
+        sed -E -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g'
+
     + `Орион`     => `Орион`     // protocol
     + `Орион Про` => `Орион Про` // protocol
 
