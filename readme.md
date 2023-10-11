@@ -17,13 +17,13 @@ https://partners.bolid.ru/forum/forum_25730.html
 WIP:
 <br />
 
-[Соглашения и условные обозначения](conventions.md)
+[WIP: Соглашения и условные обозначения](conventions.md)
 <br />
 [АРМ С3000: установка образов Docker в ОС Linux](docker-linux.md)
 <br />
 [АРМ С3000: установка образов Docker в ОС Windows](docker-windows.md)
 <br />
-[АРМ С3000: установка сервиса в ОС Windows](win.md)
+[АРМ С3000: установка в ОС Windows](win.md)
 
 [АРМ С3000: быстрый старт](quick-start.md)
 <br />
