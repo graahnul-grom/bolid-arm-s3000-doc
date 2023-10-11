@@ -389,6 +389,8 @@ Alpine, Astra и Ubuntu нескольких версий.
 Данные учетной записи `admin` рекомендуется сразу же изменить,
 задав новый пароль.
 
+<!-- link to 'users', see todo there -->
+
 Также стоит рассмотреть переход на защищенное соединение
 по протоколу HTTPS (см. "Использование защищенного соединения").
 
@@ -912,6 +914,9 @@ TODO [info on bots](https://core.telegram.org/bots) + bots, telegram intro (rus)
 
 <!--
 TODO
+- note about changing passwords
+- note about resetting passwords
+- rename section
 - доступ из программ: UProg, PProg или Shleifes.
 - can change own password
 2ASK [x] сброс пароля к настройкам по умолчанию => added in new docs versions
