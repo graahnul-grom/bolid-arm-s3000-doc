@@ -553,11 +553,6 @@ Alpine, Astra и Ubuntu нескольких версий.
 "Требования и рекомендации по настройке временны́х параметров"
 документации **s2k-eth**.
 
-<!-- TODO line marks - color coding -->
-<!-- TODO Опции subsection -->
-<!-- TODO apply cfg button -->
-<!-- TODO note on web ui f##kup: click line => props, click ">" => line contents -->
-
 **Примечание:**<br />
 Сообщение "Добавлено максимум линий" в списке линий
 говорит о том, что все добавленные *порты* (как RS, так и **s2k-eth**)
@@ -578,21 +573,12 @@ Alpine, Astra и Ubuntu нескольких версий.
 (40 мс по умолчанию), умноженное на 127.
 
 <!--
+TODO apply cfg button
 TODO line properties - *config applied* param shown when:
-- has *config* applied
-- proto: orion
-
-- port
-- protocol
-- speed
-- query devices
-- timeouts
-  - [s2k-eth-re 2.2.5.4 Требования и рекомендации по настройке временных параметров p27]()
-  - [s2k-eth-re 2.2.5.4.2 Настройка временных параметров p30]()
-  - short descr of new events requests timeout tradeoffs
-- "options": not described in [s3k-re]
-- => after a while s2km should appear in device list
- 2ASK: 40 ms (default val) * 127 = 5080 ms
+  - has *config* applied
+  - proto: orion
+TODO "Options": not described in s3k-re
+TODO note on web ui f##kup: click line => props, click ">" => line contents
 -->
 
 
