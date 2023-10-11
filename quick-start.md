@@ -11,7 +11,7 @@
       - in comments: TODO
 
     - screenshot here
-      - in visible text: **SS**
+      - in visible text: **screenshot** **screenshot: <description>**
       - in separate 1-line comment:
 -->
 
@@ -22,6 +22,8 @@
 -->
 
 <!-- NOTE replace:
+
+    TODO web links to SW/HW when first mentioned
 
     + - => — // long
       - vim cmd (select -> :so<CR>):
@@ -530,15 +532,14 @@ TODO note on web ui f##kup: click line => props, click ">" => line contents
 - "Использовать один порт на прием/передачу"
   ("Использовать один порт на чтение/запись" для версий **s2k-eth** < 3.10)
 
-<!-- TODO: -->
-[s2k-eth-re x.x.x yyy pNNN]()
+[s2k-eth-re 2.2.5 Настройка прибора p16]()
 
 Затем в web-интерфейсе **s3k** следует добавить *порт* на странице
 *`Конфигурирование структуры объекта`* → *`Приборы`* → *`Порты c2000 Ethernet`*,
 установив следующие параметры
 в соответствии с проведенными настройками **s2k-eth**:
 - Локальный порт **s3k**
-- IP или DNS адрес **s2k-eth**
+- адрес IP или имя DNS устройства **s2k-eth**
 - UDP порт **s2k-eth**
 
 [s3k-re 2.3.5.3.2 Вкладка Порты C2000 Ethernet p105]()
