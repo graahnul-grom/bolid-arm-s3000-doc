@@ -143,7 +143,7 @@ NOTE:
 
 ### Параметры Nginx
 
-![Параметры Nginx](ss_win/comps.png "Параметры Nginx")
+![Параметры Nginx](ss_win/nginx.png "Параметры Nginx")
 
 <!--
 Если **Nginx** отсутствует среди выбранных компонентов,
