@@ -548,6 +548,7 @@ TODO note on web ui f##kup: click line => props, click ">" => line contents
 - UDP порт **s2k-eth**
 
 [s3k-re 2.3.5.3.2 Вкладка Порты C2000 Ethernet p105]()
+[s2k-eth-re figures: Соответствие параметров конфигураций p107 p108]()
 
 <!--
 TODO UDP port forwarding - take from docker md files
@@ -907,7 +908,7 @@ TODO [info on bots](https://core.telegram.org/bots) + bots, telegram intro (rus)
 - *`Конфигурирование структуры объекта`* → *`Пользователи`*.
 
 Подробнее см.
-[s3k-re 2.3.5.2 Страница Пользователи p81]()
+[s3k-re 2.3.5.2 Страница "Пользователи" p81]()
 
 <!--
 TODO
@@ -970,6 +971,14 @@ TODO
 Certification Authorities).
 
 <!-- SS -->
+
+[s3k-re 2.3.4.1.5.1 Импорт сертификатов в ОС Windows p66]()
+
+[s3k-re 2.3.4.1.5 Импорт и установка сертификатов p65]()
+
+<!--
+Подробнее об установке сертификатов, в том числе
+-->
 
 
 
