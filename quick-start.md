@@ -99,9 +99,14 @@ was: в течение определенного времени (~1)
     + **PProg**
       [**PProg**](https://bolid.ru/production/orion/po-orion/po-config/pprog.html)
 
-    + [s3k-re x.x.x yyy pNNN]()     => links to s3k manual
+    + [s3k-re x.x.x yyy pNNN]()     => links to s3k manual, "Руководство по эксплуатации"
     + [s2k-eth-re x.x.x yyy pNNN]() => links to s2k-eth manual
     + [XXX-re x.x.x yyy pNNN]()     => links to XXX manual
+
+    + TODO double quotes in referenced manual's sections,
+           "Вкладка "Порты C2000 Ethernet""
+           =>
+           WIP: remove inner pair of quotes
 -->
 
 <!-- src: `Инструкция по быстрому старту АРМ С3000 23_03_02.pdf` -->
@@ -536,7 +541,7 @@ TODO note on web ui f##kup: click line => props, click ">" => line contents
 - "Использовать один порт на прием/передачу"
   ("Использовать один порт на чтение/запись" для версий **s2k-eth** < 3.10)
 
-[s2k-eth-re 2.2.5 Настройка прибора p16]()
+Описание см. в руководстве по эксплуатации s2k-eth-re ("Настройка прибора").
 
 Затем в web-интерфейсе **s3k** следует добавить *порт* на странице
 *`Конфигурирование структуры объекта`* → *`Приборы`* → *`Порты c2000 Ethernet`*,
@@ -546,17 +551,16 @@ TODO note on web ui f##kup: click line => props, click ">" => line contents
 - адрес IP или имя DNS устройства **s2k-eth**
 - UDP порт **s2k-eth**
 
-[s3k-re 2.3.5.3.2 Вкладка Порты C2000 Ethernet p105]()
-[s2k-eth-re figures: Соответствие параметров конфигураций p107 p108]()
+Так как пользовательский интерфейс свойств **s2k-eth** в программе **UProg**
+может отличаться для различных версий прибора,
+рекомендуется обратиться к снимкам экрана
+"Соответствие параметров конфигураций"
+в руководстве ("Вкладка Порты C2000 Ethernet").
 
 <!--
 TODO UDP port forwarding - take from docker md files
 - from qstart: WTF "типа порта"
 - from manual, WTF "virt. line"
-**Внимание:**<br />
-В зависимости от используемого прибора (его аппаратной версии),
-имена некоторых параметров в окне настройки **UProg** могут
-несколько отличаться.
 -->
 
 
@@ -816,7 +820,7 @@ p. 91:
 
 <!-- SS -->
 
-[s3k-re 2.3.5.7.3 Настройка нового бота Telegram p134]()
+Руководство: "Настройка нового бота Telegram"
 
 
 
