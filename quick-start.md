@@ -103,7 +103,7 @@ was: в течение определенного времени (~1)
     + [s2k-eth-re x.x.x yyy pNNN]() => links to s2k-eth manual
     + [XXX-re x.x.x yyy pNNN]()     => links to XXX manual
 
-    + TODO double quotes in referenced manual's sections,
+    + TODO double quotes in referenced manual's sections, e.g.:
            "Вкладка "Порты C2000 Ethernet""
            =>
            WIP: remove inner pair of quotes
@@ -338,6 +338,8 @@ Alpine, Astra и Ubuntu нескольких версий.
 Системные требования и инструкции по установке
 содержатся в документах:
 
+<!-- TODO publishing: remove links -->
+<!-- TODO publishing: check exact titles -->
 - [Установка образов Docker в ОС Linux](docker-linux.md)
 - [установка образов Docker в ОС Windows](docker-windows.md)
 - [Установка в ОС Windows](win.md)
@@ -509,7 +511,7 @@ TODO note on web ui f##kup: click line => props, click ">" => line contents
 - "Использовать один порт на прием/передачу"
   ("Использовать один порт на чтение/запись" для версий **s2k-eth** < 3.10)
 
-Описание см. в руководстве по эксплуатации s2k-eth-re ("Настройка прибора").
+Описание см. в руководстве по эксплуатации **s2k-eth** ("Настройка прибора").
 
 Затем в web-интерфейсе **s3k** следует добавить *порт* на странице
 *`Конфигурирование структуры объекта`* → *`Приборы`* → *`Порты c2000 Ethernet`*,
@@ -937,5 +939,5 @@ TODO
 <!-- SS -->
 
 Подробнее о сертификатах, особенностях установки в других системах
-и web-браузерах см. в руководстве, "Импорт и установка сертификатов".
+и web-браузерах - в руководстве, "Импорт и установка сертификатов".
 
