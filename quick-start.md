@@ -880,7 +880,8 @@ p. 91:
 
 ![08](ss_q/08.png "08")<br />
 ![09](ss_q/09.png "09")<br />
-![10](ss_q/10.png "10")
+![10](ss_q/10.png "10")<br />
+![18](ss_q/18.png "18")
 
 <!--
 2ASK [x] Администратор бота => can issue text commands in rus (e.g. "настройки")
