@@ -975,13 +975,3 @@ Certification Authorities).
 Подробнее о сертификатах, особенностях установки в других системах
 и web-браузерах см. в руководстве, "Импорт и установка сертификатов".
 
-
-
-<!-- NOTE accent chars (stress marks)
-- made by http://russiangram.com:<br />
-1ы́3<br />
-- made by win10 char map app<br />
-ы̀́́́́́́́́́́<br />
-1ы̀́́́́́́́́́́3<br />
--->
-
