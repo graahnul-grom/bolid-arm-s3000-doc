@@ -180,8 +180,8 @@ $ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 $ systemctl status docker
 
 docker.service - Docker Application Container Engine
-     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
-     Active: active (running) since Thu 2023-08-10 22:35:32 MSK; 22min ago
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; ...
+     Active: active (running) since Thu 2023-08-10 22:35:32 MSK; ...
 TriggeredBy: docker.socket
        Docs: https://docs.docker.com
    Main PID: 2054 (dockerd)
@@ -189,7 +189,7 @@ TriggeredBy: docker.socket
      Memory: 43.1M
         CPU: 483ms
      CGroup: /system.slice/docker.service
-             └─2054 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sockh
+             └─2054 /usr/bin/dockerd -H fd:// ...
 
 ```
 

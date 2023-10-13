@@ -88,6 +88,7 @@ pandoc \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.pdf
 }
+mk_pdf "0.5cm"
 # mk_pdf "0"
 
 mk_pdf_2()
