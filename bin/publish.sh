@@ -1,13 +1,31 @@
 #!/bin/sh
 
+# NAME="$1"
+
 NAME=quick-start
+TITLE="АРМ_С3000_быстрый_старт"
+
+# NAME=docker-linux
+# TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Linux"
+
+# NAME=docker-windows
+# TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
+
+# NAME=win
+# TITLE="АРМ_С3000_установка_в_ОС_Windows"
+
+
 
 REPO=$HOME/s3k.git
 SRC="${REPO}/${NAME}.md"
 DEST=$REPO/pub
 
+[ -n "$NAME" ] || { echo ".. !NAME"; exit 1; }
 mkdir -p $DEST || { echo ".. !mkdir DEST"; exit 1; }
+mkdir -p $DEST/res || { echo ".. !mkdir DEST/res"; exit 1; }
 [ -r $SRC ] || { echo ".. !SRC"; exit 1; }
+
+
 
 # remove comments
 #
@@ -16,6 +34,8 @@ mkdir -p $DEST || { echo ".. !mkdir DEST"; exit 1; }
 sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba' \
     $SRC > \
     $DEST/1-$NAME.md
+
+
 
 # replace placeholders, typographics
 #
@@ -31,6 +51,8 @@ sed -E \
     -e 's,\*`,***,g' -e 's,`\*,***,g' \
     $DEST/1-$NAME.md > \
     $DEST/2-$NAME.md
+
+
 
 # convert
 # NOTE: gfm - "GitHub-Flavored Markdown"
@@ -94,4 +116,11 @@ pandoc \
     -o $DEST/3-$NAME.html
 }
 # mk_html
+
+
+
+# rename, copy the resulting file
+#
+cp $DEST/3-$NAME.pdf \
+    $DEST/res/"${TITLE}_`date +'%y_%m_%d'`".pdf
 
