@@ -2,14 +2,14 @@
 
 # NAME="$1"
 
-NAME=quick-start
-TITLE="АРМ_С3000_быстрый_старт"
+# NAME=quick-start
+# TITLE="АРМ_С3000_быстрый_старт"
 
 # NAME=docker-linux
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Linux"
 
-# NAME=docker-windows
-# TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
+NAME=docker-windows
+TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
 
 # NAME=win
 # TITLE="АРМ_С3000_установка_в_ОС_Windows"
