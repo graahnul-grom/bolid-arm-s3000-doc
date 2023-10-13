@@ -16,6 +16,7 @@ sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba' \
     $DEST/0-$NAME.md
 
 # TODO: don't replace " (quote) in image tags
+# TODO: replace right " (quote) before punctuations
 #
 sed -E \
     -e 's,\*\*iso\*\*,**ИСО Орион**,g' \
