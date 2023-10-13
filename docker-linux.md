@@ -85,13 +85,13 @@ $ sudo usermod -a -G docker USER_NAME
 (служба **Docker** запускается без прав суперпользователя, `root`):
 
 - Установить пакет `rootless-helper-astra`:
-```
-$ sudo apt install rootless-helper-astra
-```
+    ```
+    $ sudo apt install rootless-helper-astra
+    ```
 - Запустить службу **Docker** от имени пользователя *USER_NAME*:
-```
-$ sudo systemctl start rootless-docker@USER_NAME
-```
+    ```
+    $ sudo systemctl start rootless-docker@USER_NAME
+    ```
 - Включить автоматический запуск службы от имени пользователя *USER_NAME*:
 ```
 $ sudo systemctl start rootless-docker@USER_NAME
