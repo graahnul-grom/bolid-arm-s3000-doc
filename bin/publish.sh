@@ -50,15 +50,15 @@ pandoc \
 
 mk_pdf()
 {
-    # TODO: toc links gets encoded? can't jump
-    # --toc \
+    # TODO: toc links gets encoded => can't follow
+    #       (--toc)
+    # --metadata=title:"АРМ С3000: быстрый старт" \ => extra title
 pandoc \
     -f gfm \
     -t pdf \
     --wrap=preserve \
     --standalone \
     --pdf-engine=wkhtmltopdf \
-    --metadata=title:"АРМ С3000: быстрый старт" \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.pdf
 }
