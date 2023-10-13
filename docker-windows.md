@@ -18,13 +18,9 @@
   задаваемых пользователем.
 - `Моноширинный шрифт` применяется для имен файлов, команд и их параметров,
   а также для примеров выполнения и вывода команд.
-- Команды, запускаемые в `Windows PowerShell` предваряются
-  приглашением командной строки вида `PS>`.
+- Команды, запускаемые в `Windows PowerShell` показаны
+  с приглашением командной строки вида `PS>`.
 - **Внимание:** так обозначены важные замечания.
-<!--
-- **TODO**: win gui [breadcrumbs](conventions.md) (currently: `->`)
-- **TODO**: web interface breadcrumbs
--->
 
 
 
@@ -40,7 +36,7 @@
 - Windows 10 Home, Pro, Enterprise, Education версии 21H1 (сборка 19044) и выше
 - Windows 11 Home, Pro, Enterprise, Education версии 21H1 (сборка 19044) и выше
 - WSL (Windows Subsystem for Linux) версии 2
-- 64-разрядный процессор с поддержкой SLAT
+- 64-разрядный процессор с поддержкой SLAT (Second Level Address Translation)
 - не менее 4 Гб оперативной памяти
 - включенная поддержка аппаратной виртуализации в BIOS
 
@@ -51,12 +47,12 @@
 - Включить аппаратную виртуализацию в настройках BIOS
 
 - Установить компоненты «Платформа виртуальной машины» и «Подсистема Windows для Linux»
-  в панели управления: Программы и компоненты -> Включение или отключение компонентов Windows
-  (Programs and Features -> Turn Windows features on or off).
+  в панели управления: *`Программы и компоненты`* -> *`Включение или отключение компонентов Windows`*
+  (*`Programs and Features`* -> *`Turn Windows features on or off`*).
 
 **Внимание:**<br />
 Запуск программ установки и выполнение команд `Windows PowerShell`
-должны осуществляться от имени администратора системы.
+должны осуществляться от имени *администратора* системы.
 
 
 
@@ -107,7 +103,8 @@ PS> wsl --install --distribution Ubuntu
 
 ```
 Installing, this may take a few minutes...
-Please create a default UNIX user account. The username does not need to match your Windows username.
+Please create a default UNIX user account.
+The username does not need to match your Windows username.
 For more information visit: https://aka.ms/wslusers
 Enter new UNIX username: myuser
 New password:
@@ -241,7 +238,7 @@ PS> .\docker-windows-run.bat
 ## Перенаправление портов UDP
 
 <!--
-**TODO**: [need it](docker-compare-toc.md)?
+**TODO**: [need it?](docker-compare-toc.md)?
 **TODO**: port spec in arm-s3000 web interface
 - 20500 - port on localhost (?)
 - 60500 - port on s2000-ether
