@@ -83,6 +83,7 @@ $ sudo usermod -a -G docker USER_NAME
 
 Для использования **Docker** в *непривилегированном* (*rootless*) режиме
 (служба **Docker** запускается без прав суперпользователя, `root`):
+
 - Установить пакет `rootless-helper-astra`:
 ```
 $ sudo apt install rootless-helper-astra
@@ -106,22 +107,22 @@ $ sudo systemctl start rootless-docker@USER_NAME
 
 ### Alpine Linux
 
-- Установить пакет `docker` (находится в [репозитории](https://wiki.alpinelinux.org/wiki/Repositories) «community»):
+Установить пакет `docker` (находится в [репозитории](https://wiki.alpinelinux.org/wiki/Repositories) «community»):
 ```
 # apk add docker
 ```
 
-- Запустить службу **Docker**:
+Запустить службу **Docker**:
 ```
 # service docker start
 ```
 
-- Включить автоматический запуск службы:
+Включить автоматический запуск службы:
 ```
 # rc-update add docker boot
 ```
 
-- При необходимости, разрешить работу с **Docker** непривилегированным
+При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
 ```
 # addgroup USER_NAME docker
@@ -132,25 +133,25 @@ $ sudo systemctl start rootless-docker@USER_NAME
 
 Предпочтительно устанавливать **Docker** из официального репозитория.
 
-- Прежде всего, следует удалить пакеты **Docker**,
+Прежде всего, следует удалить пакеты **Docker**,
 установленные из репозиториев Ubuntu:
 ```
 $ sudo apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-- Установить необходимые пакеты:
+Установить необходимые пакеты:
 ```
 $ sudo apt-get install ca-certificates curl gnupg lsb-release
 ```
 
-- Загрузить и добавить GPG-ключ репозитория:
+Загрузить и добавить GPG-ключ репозитория:
 ```
 $ sudo mkdir -p /etc/apt/keyrings
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
   | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-- Добавить репозиторий:
+Добавить репозиторий:
 ```sh
 $ echo "deb [arch=$(dpkg --print-architecture)                        \
   signed-by=/etc/apt/keyrings/docker.gpg]                             \
@@ -165,12 +166,12 @@ $ echo "deb [arch=$(dpkg --print-architecture)                        \
 deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian jammy stable
 ```
 
-- Обновить список пакетов:
+Обновить список пакетов:
 ```
 $ sudo apt update
 ```
 
-- Установить пакеты **Docker**:
+Установить пакеты **Docker**:
 ```
 $ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
@@ -183,17 +184,10 @@ $ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 $ systemctl status docker
 
 docker.service - Docker Application Container Engine
-     Loaded: loaded (/lib/systemd/system/docker.service; enabled; ...
-     Active: active (running) since Thu 2023-08-10 22:35:32 MSK; ...
-TriggeredBy: docker.socket
-       Docs: https://docs.docker.com
-   Main PID: 2054 (dockerd)
-      Tasks: 9
-     Memory: 43.1M
-        CPU: 483ms
-     CGroup: /system.slice/docker.service
-             └─2054 /usr/bin/dockerd -H fd:// ...
-
+    Loaded: loaded (/lib/systemd/system/docker.service; enabled; ...
+    Active: active (running) since Thu 2023-08-10 22:35:32 MSK; ...
+    TriggeredBy: docker.socket
+    ...
 ```
 
 ```
@@ -203,7 +197,7 @@ docker.service    enabled    enabled
 docker.socket     enabled    enabled
 ```
 
-- При необходимости, разрешить работу с **Docker** непривилегированным
+При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
 ```
 $ sudo usermod -a -G docker USER_NAME
@@ -217,9 +211,9 @@ $ sudo usermod -a -G docker USER_NAME
 произвести проверку **Docker** с использованием специально предназначенного
 для этой цели контейнера `hello-world`:
 
-- Убедиться в наличии подключения к сети Интернет
+Убедиться в наличии подключения к сети Интернет.
 
-- Выполнить команду:
+Выполнить команду:
 ```
 $ sudo docker run hello-world
 ```
@@ -241,18 +235,19 @@ This message shows that your installation appears to be working correctly.
 
 ## Подготовка контейнера
 
-- Импортировать образ в локальный репозиторий **Docker**:
+Импортировать образ в локальный репозиторий **Docker**:
 ```
 $ sudo docker load --input arm-s3000-astra-smolensk_1.7-VERSION.tar.xz
 ```
+
 Здесь и далее, *VERSION* в имени файла следует заменить на номер
 версии образа, с которым фактически происходит работа.
 Например, для версии `1.01.654.182`, имя файла будет выглядеть как
 `arm-s3000-astra-smolensk_1.7-1.01.654.182.tar.xz`.
 
-- Создать том **Docker** для хранения данных контейнера.
-  `arm-s3000-volume` в команде — произвольное имя тома
-  (должно быть уникальным в пределах локальной ОС):
+Создать том **Docker** для хранения данных контейнера.
+`arm-s3000-volume` в команде — произвольное имя тома
+(должно быть уникальным в пределах локальной ОС):
 ```
 $ sudo docker volume create arm-s3000-volume
 ```
@@ -295,10 +290,10 @@ $ sudo docker run                      \
 ## Перенаправление портов UDP
 
 Перенаправление портов UDP может потребоваться:
-1. При подключении приборов к **АРМ С3000** через устройство **С2000-Ethernet**
+- При подключении приборов к **АРМ С3000** через устройство **С2000-Ethernet**
    в том случае, если в настройках **С2000-Ethernet** отключен параметр
    «Использовать один UDP-порт на чтение и запись».
-2. В случае возникновения проблем при использовании NAT.
+- В случае возникновения проблем при использовании NAT.
 
 Для этого необходимо передать команде `docker run` параметр вида
 `--publish 20500:60500/udp`. Где до `:` указан порт на локальной
@@ -367,26 +362,27 @@ usbserial       /dev/ttyUSB    188  0-511    serial
 Здесь мы видим файл устройства `/dev/ttyUSB` (подключен преобразователь USB
 в RS-485 **С2000-USB**), соответственно, параметр для команды `docker run`
 будет таким: `--device=/dev/ttyUSB`.
-Этот же путь следует указать в Web-интерфейсе системы **АРМ С3000**: поле «Устройство»
-в настройках порта на вкладке «Порты RS» («Настройки портов и протоколов»).
+Этот же путь следует указать в Web-интерфейсе системы **АРМ С3000**:
+поле «Устройство» в настройках порта на вкладке «Порты RS»
+(«Настройки портов и протоколов»).
 
 
 
 ## Остановка и удаление контейнера
 
-- Остановить контейнер:
+Остановить контейнер:
 
 ```
 # docker stop arm-s3000
 ```
 
-- Удалить том **Docker** (`arm-s3000-volume` — имя тома):
+Удалить том **Docker** (`arm-s3000-volume` — имя тома):
 
 ```
 # docker volume rm arm-s3000-volume
 ```
 
-- Удалить образ **Docker**:
+Удалить образ **Docker**:
 
 ```
 # docker image rm arm-s3000-astra-smolensk_1.7:VERSION
