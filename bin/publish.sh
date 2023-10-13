@@ -36,6 +36,8 @@ sed -E \
 
 mk_odt()
 {
+    # -f gfm \
+    # -f markdown \
 pandoc \
     -f gfm \
     -t odt \
