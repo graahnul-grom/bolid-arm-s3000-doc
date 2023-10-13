@@ -9,12 +9,16 @@ DEST=$REPO/pub
 mkdir -p $DEST || { echo ".. !mkdir DEST"; exit 1; }
 [ -r $SRC ] || { echo ".. !SRC"; exit 1; }
 
+# remove comments
+#
 # FAIL: sed -E -e 's,<!--.*?-->,,g' $SRC | less
 # https://stackoverflow.com/questions/4055837/delete-html-comment-tags-using-regexp
 sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba' \
     $SRC > \
-    $DEST/0-$NAME.md
+    $DEST/1-$NAME.md
 
+# replace placeholders, typographics
+#
 sed -E \
     -e 's,\*\*iso\*\*,**ИСО Орион**,g' \
     -e 's,\*\*pro\*\*,**АРМ Орион Про**,g' \
@@ -24,6 +28,20 @@ sed -E \
     -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g' \
     -e 's/ - / — /g' \
     -e 's,(^|\(| )",\1«,g' -e 's/"( |$|.|,|\)|!|\?)/»\1/g' \
-    $DEST/0-$NAME.md > \
-    $DEST/1-$NAME.md
+    $DEST/1-$NAME.md > \
+    $DEST/2-$NAME.md
+
+# convert
+# NOTE: gfm - "GitHub-Flavored Markdown"
+#
+pandoc \
+    -f gfm \
+    -t pdf \
+    -V papersize=a4 \
+    -V colorlinks=true \
+    --toc \
+    --pdf-engine=wkhtmltopdf \
+    $DEST/2-$NAME.md \
+    -s \
+    -o $DEST/3-$NAME.pdf
 
