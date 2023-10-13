@@ -26,14 +26,27 @@ sed -E \
     -e 's,\*\*s2k-eth\*\*,**С2000-Ethernet**,g' \
     -e 's,\*\*s2km\*\*,**С2000М**,g' \
     -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g' \
-    -e 's/ - / — /g' \
+    -e 's/ -( |$)/ —\1/g' \
     -e 's,(^|\(| )",\1«,g' -e 's/"( |$|.|,|\)|!|\?)/»\1/g' \
     $DEST/1-$NAME.md > \
     $DEST/2-$NAME.md
 
 # convert
 # NOTE: gfm - "GitHub-Flavored Markdown"
-#
+
+mk_odt()
+{
+pandoc \
+    -f gfm \
+    -t odt \
+    --wrap=preserve \
+    -V papersize=A4 \
+    $DEST/2-$NAME.md \
+    -o $DEST/3-$NAME.odt
+}
+
+mk_pdf()
+{
 pandoc \
     -f gfm \
     -t pdf \
@@ -44,4 +57,9 @@ pandoc \
     $DEST/2-$NAME.md \
     -s \
     -o $DEST/3-$NAME.pdf
+}
+
+
+mk_odt
+# mk_pdf
 
