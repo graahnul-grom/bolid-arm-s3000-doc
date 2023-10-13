@@ -15,7 +15,7 @@ sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba' \
     $SRC > \
     $DEST/0-$NAME.md
 
-# TODO: don't replace '-' in lists
+# TODO: don't replace " (quote) in image tags
 #
 sed -E \
     -e 's,\*\*iso\*\*,**ИСО Орион**,g' \
@@ -24,7 +24,7 @@ sed -E \
     -e 's,\*\*s2k-eth\*\*,**С2000-Ethernet**,g' \
     -e 's,\*\*s2km\*\*,**С2000М**,g' \
     -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g' \
-    -e 's/-/—/g' \
+    -e 's/ - / — /g' \
     -e 's,(^| )",\1«,g' -e 's,"( |$),»\1,g' \
     $DEST/0-$NAME.md > \
     $DEST/1-$NAME.md
