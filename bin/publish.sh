@@ -28,6 +28,7 @@ sed -E \
     -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g' \
     -e 's/ -( |$)/ —\1/g' \
     -e 's,(^|\(| )",\1«,g' -e 's/"( |$|.|,|\)|!|\?)/»\1/g' \
+    -e 's,\*`,***,g' -e 's,`\*,***,g' \
     $DEST/1-$NAME.md > \
     $DEST/2-$NAME.md
 
@@ -41,27 +42,50 @@ mk_odt()
 pandoc \
     -f gfm \
     -t odt \
-    --wrap=preserve \
     -V papersize=A4 \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.odt
 }
+# mk_odt
 
 mk_pdf()
+{
+    # -s \
+    # -V colorlinks=true \
+    # --wrap=preserve \
+pandoc \
+    -f gfm \
+    -t pdf \
+    --wrap=preserve \
+    --toc \
+    --pdf-engine=wkhtmltopdf \
+    --metadata=title:"АРМ С3000: быстрый старт" \
+    $DEST/2-$NAME.md \
+    -o $DEST/3-$NAME.pdf
+}
+# mk_pdf
+
+mk_pdf_2()
 {
 pandoc \
     -f gfm \
     -t pdf \
-    -V papersize=a4 \
-    -V colorlinks=true \
-    --toc \
-    --pdf-engine=wkhtmltopdf \
+    --metadata=title:"АРМ С3000: быстрый старт" \
     $DEST/2-$NAME.md \
-    -s \
     -o $DEST/3-$NAME.pdf
 }
+mk_pdf_2
 
-
-mk_odt
-# mk_pdf
+mk_html()
+{
+pandoc \
+    -f gfm \
+    -t html \
+    --wrap=preserve \
+    --toc \
+    --metadata=title:"АРМ С3000: быстрый старт" \
+    $DEST/2-$NAME.md \
+    -o $DEST/3-$NAME.html
+}
+# mk_html
 
