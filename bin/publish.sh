@@ -20,12 +20,12 @@ sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba' \
 # replace placeholders, typographics
 #
 sed -E \
-    -e 's,\*\*iso\*\*,**ИСО Орион**,g' \
-    -e 's,\*\*pro\*\*,**АРМ Орион Про**,g' \
-    -e 's,\*\*s3k\*\*,**АРМ С3000**,g' \
-    -e 's,\*\*s2k-eth\*\*,**С2000-Ethernet**,g' \
+    -e 's,\*\*iso\*\*,<nobr>**ИСО Орион**</nobr>,g' \
+    -e 's,\*\*pro\*\*,<nobr>**АРМ Орион Про**</nobr>,g' \
+    -e 's,\*\*s3k\*\*,<nobr>**АРМ С3000**</nobr>,g' \
+    -e 's,\*\*s2k-eth\*\*,<nobr>**С2000-Ethernet**</nobr>,g' \
     -e 's,\*\*s2km\*\*,**С2000М**,g' \
-    -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g' \
+    -e 's,\*\*s2km2\*\*,<nobr>**С2000М исп. 02**</nobr>,g' \
     -e 's/ -( |$)/ —\1/g' \
     -e 's,(^|\(| )",\1«,g' -e 's/"( |$|.|,|\)|!|\?)/»\1/g' \
     -e 's,\*`,***,g' -e 's,`\*,***,g' \
@@ -50,31 +50,35 @@ pandoc \
 
 mk_pdf()
 {
-    # -s \
-    # -V colorlinks=true \
-    # --wrap=preserve \
+    # TODO: toc links gets encoded? can't jump
+    # --toc \
 pandoc \
     -f gfm \
     -t pdf \
     --wrap=preserve \
-    --toc \
+    --standalone \
     --pdf-engine=wkhtmltopdf \
     --metadata=title:"АРМ С3000: быстрый старт" \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.pdf
 }
-# mk_pdf
+mk_pdf
 
 mk_pdf_2()
 {
+# --pdf-engine-opt=--no-toc-relocation.
+    # -V fontenc=T2A \
+    # -V lang -V babel-lang=russian \
 pandoc \
     -f gfm \
     -t pdf \
+    --pdf-engine=xelatex -V mainfont="Open Sans" \
+    --standalone \
     --metadata=title:"АРМ С3000: быстрый старт" \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.pdf
 }
-mk_pdf_2
+# mk_pdf_2
 
 mk_html()
 {
