@@ -136,12 +136,21 @@ $ sudo systemctl start rootless-docker@USER_NAME
 Прежде всего, следует удалить пакеты **Docker**,
 установленные из репозиториев Ubuntu:
 ```
-$ sudo apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+$ sudo apt purge         \
+    docker-ce            \
+    docker-ce-cli        \
+    containerd.io        \
+    docker-buildx-plugin \
+    docker-compose-plugin
 ```
 
 Установить необходимые пакеты:
 ```
-$ sudo apt-get install ca-certificates curl gnupg lsb-release
+$ sudo apt install  \
+    ca-certificates \
+    curl            \
+    gnupg           \
+    lsb-release
 ```
 
 Загрузить и добавить GPG-ключ репозитория:
@@ -173,7 +182,11 @@ $ sudo apt update
 
 Установить пакеты **Docker**:
 ```
-$ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+$ sudo apt install \
+    docker-ce      \
+    docker-ce-cli  \
+    containerd.io  \
+    docker-compose-plugin
 ```
 
 В случае успешной установки, служба `docker` будет запущена и добавлена
