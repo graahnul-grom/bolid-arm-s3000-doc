@@ -93,9 +93,9 @@ $ sudo usermod -a -G docker USER_NAME
     $ sudo systemctl start rootless-docker@USER_NAME
     ```
 - Включить автоматический запуск службы от имени пользователя *USER_NAME*:
-```
-$ sudo systemctl start rootless-docker@USER_NAME
-```
+    ```
+    $ sudo systemctl start rootless-docker@USER_NAME
+    ```
 
 Для запуска команд **Docker** в непривилегированном режиме следует
 использовать `rootlessenv(1)` из пакета `rootless-helper-astra`, например:
