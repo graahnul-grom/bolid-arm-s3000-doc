@@ -53,11 +53,13 @@ mk_pdf()
     # TODO: toc links gets encoded => can't follow
     #       (--toc)
     # --metadata=title:"АРМ С3000: быстрый старт" \ => extra title
+    # poh: -V margin-left=0 -V margin-right=0 -V margin-top=0 -V margin-bottom=0 \
 pandoc \
     -f gfm \
     -t pdf \
     --wrap=preserve \
     --standalone \
+    -V margin-left=1cm -V margin-right=1cm -V margin-top=1cm -V margin-bottom=1cm \
     --pdf-engine=wkhtmltopdf \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.pdf
