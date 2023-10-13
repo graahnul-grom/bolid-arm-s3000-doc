@@ -15,9 +15,6 @@ sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba' \
     $SRC > \
     $DEST/0-$NAME.md
 
-# TODO: don't replace " (quote) in image tags
-# TODO: replace right " (quote) before punctuations
-#
 sed -E \
     -e 's,\*\*iso\*\*,**ИСО Орион**,g' \
     -e 's,\*\*pro\*\*,**АРМ Орион Про**,g' \
@@ -26,7 +23,7 @@ sed -E \
     -e 's,\*\*s2km\*\*,**С2000М**,g' \
     -e 's,\*\*s2km2\*\*,**С2000М исп. 02**,g' \
     -e 's/ - / — /g' \
-    -e 's,(^| )",\1«,g' -e 's,"( |$),»\1,g' \
+    -e 's,(^|\(| )",\1«,g' -e 's/"( |$|.|,|\)|!|\?)/»\1/g' \
     $DEST/0-$NAME.md > \
     $DEST/1-$NAME.md
 
