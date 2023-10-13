@@ -1,5 +1,3 @@
-# bolid-arm-s3000-doc / docker-windows
-
 # АРМ С3000: установка образов Docker в ОС Windows
 
 

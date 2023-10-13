@@ -1,5 +1,3 @@
-# bolid-arm-s3000-doc / quick-start
-
 # АРМ С3000: быстрый старт
 
 

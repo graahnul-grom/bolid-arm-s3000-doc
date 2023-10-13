@@ -1,5 +1,3 @@
-# bolid-arm-s3000-doc / docker-linux
-
 # АРМ С3000: установка образов Docker в ОС Linux
 
 
