@@ -248,11 +248,9 @@ Alpine, Astra и Ubuntu нескольких версий.
 Системные требования и инструкции по установке
 содержатся в документах:
 
-<!-- TODO publishing: remove links -->
-<!-- TODO publishing: check exact titles -->
-- [Установка образов Docker в ОС Linux](docker-linux.md)
-- [установка образов Docker в ОС Windows](docker-windows.md)
-- [Установка в ОС Windows](win.md)
+- Установка образов Docker в ОС Linux
+- установка образов Docker в ОС Windows
+- Установка в ОС Windows
 
 **Внимание:**<br />
 При установке и запуске **s3k**
