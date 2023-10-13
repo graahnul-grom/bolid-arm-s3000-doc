@@ -31,7 +31,7 @@
 
 ## Сокращения
 
-- ОС — операционная система<br />
+- ОС — операционная система
 - ПО — программное обеспечение
 
 
@@ -39,9 +39,11 @@
 ## Системные требования
 
 Поддерживаются следующие операционные системы:
-- Astra Linux Special Edition 1.7 («Орел», «Воронеж», «Смоленск»)
+- Astra Linux Special Edition 1.7
+  («Орел», «Воронеж», «Смоленск»)
 - Alpine Linux 3.16.2
-- Ubuntu Linux 20.04 LTS («Focal Fossa»), 22.04 LTS («Jammy Jellyfish»)
+- Ubuntu Linux 20.04 LTS («Focal Fossa»),
+  22.04 LTS («Jammy Jellyfish»)
 
 Для каждой из ОС предоставляется свой образ **Docker**.
 При установке на других системах рекомендуется использовать
@@ -58,41 +60,42 @@
 
 ### Astra Linux
 
-- Установить пакет `docker.io`:
+Установить пакет `docker.io`:
 ```
 $ sudo apt install docker.io
 ```
 
-- Запустить службу **Docker**:
+Запустить службу **Docker**:
 ```
 $ sudo systemctl start docker
 ```
 
-- Включить автоматический запуск службы:
+Включить автоматический запуск службы:
 ```
 $ sudo systemctl enable docker
 ```
 
-- При необходимости, разрешить работу с **Docker** непривилегированным
+При необходимости, разрешить работу с **Docker** непривилегированным
 пользователям. Например, для пользователя *USER_NAME*:
 ```
 $ sudo usermod -a -G docker USER_NAME
 ```
 
-- Для использования **Docker** в *непривилегированном* (*rootless*) режиме
+Для использования **Docker** в *непривилегированном* (*rootless*) режиме
 (служба **Docker** запускается без прав суперпользователя, `root`):
-    1. Установить пакет `rootless-helper-astra`:
-    ```
-    $ sudo apt install rootless-helper-astra
-    ```
-    2. Запустить службу **Docker** от имени пользователя *USER_NAME*:
-    ```
-    $ sudo systemctl start rootless-docker@USER_NAME
-    ```
-    3. Включить автоматический запуск службы от имени пользователя *USER_NAME*:
-    ```
-    $ sudo systemctl start rootless-docker@USER_NAME
-    ```
+- Установить пакет `rootless-helper-astra`:
+```
+$ sudo apt install rootless-helper-astra
+```
+- Запустить службу **Docker** от имени пользователя *USER_NAME*:
+```
+$ sudo systemctl start rootless-docker@USER_NAME
+```
+- Включить автоматический запуск службы от имени пользователя *USER_NAME*:
+```
+$ sudo systemctl start rootless-docker@USER_NAME
+```
+
 Для запуска команд **Docker** в непривилегированном режиме следует
 использовать `rootlessenv(1)` из пакета `rootless-helper-astra`, например:
 `rootlessenv docker run ...`, `rootlessenv docker volume create ...`, и т.д.
