@@ -169,7 +169,7 @@ PS> docker volume create arm-s3000-volume
 
 ## Запуск контейнера
 Команду запуска контейнера удобнее всего поместить в
-[пакетный файл](https://ru.wikipedia.org/wiki/Пакетный_файл):
+пакетный файл:
 
 ```
 PS> cat docker-windows-run.bat
