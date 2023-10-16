@@ -41,7 +41,6 @@
 Поддерживаются следующие операционные системы:
 - Astra Linux Special Edition 1.7
   («Орел», «Воронеж», «Смоленск»)
-- Alpine Linux 3.16.2
 - Ubuntu Linux 20.04 LTS («Focal Fossa»),
   22.04 LTS («Jammy Jellyfish»)
 
@@ -103,30 +102,6 @@ $ sudo usermod -a -G docker USER_NAME
 
 Официальная документация:
 [Установка и администрирование Docker в Astra Linux 1.7](https://wiki.astralinux.ru/pages/viewpage.action?pageId=158601444)
-
-
-### Alpine Linux
-
-Установить пакет `docker` (находится в [репозитории](https://wiki.alpinelinux.org/wiki/Repositories) «community»):
-```
-# apk add docker
-```
-
-Запустить службу **Docker**:
-```
-# service docker start
-```
-
-Включить автоматический запуск службы:
-```
-# rc-update add docker boot
-```
-
-При необходимости, разрешить работу с **Docker** непривилегированным
-пользователям. Например, для пользователя *USER_NAME*:
-```
-# addgroup USER_NAME docker
-```
 
 
 ### Ubuntu Linux
