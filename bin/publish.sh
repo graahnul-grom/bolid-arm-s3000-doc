@@ -2,11 +2,12 @@
 
 # NAME="$1"
 
-# NAME=quick-start
+NAME=quick-start
+TITLE="arm_s3000_quick_start"
 # TITLE="АРМ_С3000_быстрый_старт"
 
-NAME=docker-linux
-TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Linux"
+# NAME=docker-linux
+# TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Linux"
 
 # NAME=docker-windows
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
@@ -88,7 +89,7 @@ pandoc \
     $DEST/2-$NAME.md \
     -o $DEST/3-$NAME.pdf
 }
-mk_pdf "0.5cm"
+# mk_pdf "0.5cm"
 # mk_pdf "0"
 
 mk_pdf_2()
@@ -124,6 +125,9 @@ pandoc \
 
 # rename, copy the resulting file
 #
-cp $DEST/3-$NAME.pdf \
-    $DEST/res/"${TITLE}_`date +'%y_%m_%d'`".pdf
+cp $DEST/3-$NAME.odt \
+    $DEST/res/"${TITLE}_`date +'%y_%m_%d'`".odt
+
+# cp $DEST/3-$NAME.pdf \
+    # $DEST/res/"${TITLE}_`date +'%y_%m_%d'`".pdf
 
