@@ -363,7 +363,9 @@ adding rs port - "Устройство":
   (в зависимости от аппаратной версии прибора)
 - для пульта **s2km2** - не ниже 5.02
 
-[Прошивки для **s2km**](https://bolid.ru/production/orion/network-controllers/s2000m.html#download)
+**Примечание:**<br />
+Актуальные версии прошивок для пультов можно загрузить с web-сайта `bolid.ru`:<br />
+https://bolid.ru/production/orion/network-controllers/s2000m.html#download
 
 
 
