@@ -145,7 +145,7 @@ $ echo "deb [arch=$(dpkg --print-architecture)                        \
 ```
 
 После выполнения команды будет создан файл `/etc/apt/sources.list.d/docker.list`
-следующего вида (приведён пример для Ubuntu 22.04 LTS «Jammy Jellyfish» на
+следующего вида (приведен пример для Ubuntu 22.04 LTS «Jammy Jellyfish» на
 машине с архитектурой `amd64`):
 ```
 deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian jammy stable
@@ -167,7 +167,7 @@ $ sudo apt install \
 
 В случае успешной установки, служба `docker` будет запущена и добавлена
 в автоматическую загрузку. Для проверки следует выполнить следующие
-команды и убедиться в соответствии их вывода приведённому ниже:
+команды и убедиться в соответствии их вывода приведенному ниже:
 
 ```
 $ systemctl status docker
