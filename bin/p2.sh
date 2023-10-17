@@ -2,8 +2,8 @@
 
 # NAME="$1"
 
-NAME=quick-start
-TITLE="arm_s3000_quick_start"
+# NAME=quick-start
+# TITLE="arm_s3000_quick_start"
 # TITLE="АРМ_С3000_быстрый_старт"
 
 # NAME=docker-linux
@@ -14,8 +14,8 @@ TITLE="arm_s3000_quick_start"
 # TITLE="arm_s3000_docker_windows"
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
 
-# NAME=windows
-# TITLE="arm_s3000_windows"
+NAME=windows
+TITLE="arm_s3000_windows"
 # TITLE="АРМ_С3000_установка_в_ОС_Windows"
 
 
@@ -39,8 +39,8 @@ mkdir -p $TMP || { echo ".. !mkdir TMP"; exit 1; }
 #
 cp -a $SRC $WIP
 vim -c "source $BIN/p2_rm_comments.vim" $WIP
-
-exit $?
+cp $WIP $DEST/1-$NAME.md
+# exit $?
 
 
 

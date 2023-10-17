@@ -2,8 +2,8 @@
 
 # NAME="$1"
 
-NAME=quick-start
-TITLE="arm_s3000_quick_start"
+# NAME=quick-start
+# TITLE="arm_s3000_quick_start"
 # TITLE="АРМ_С3000_быстрый_старт"
 
 # NAME=docker-linux
@@ -14,8 +14,8 @@ TITLE="arm_s3000_quick_start"
 # TITLE="arm_s3000_docker_windows"
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
 
-# NAME=windows
-# TITLE="arm_s3000_windows"
+NAME=windows
+TITLE="arm_s3000_windows"
 # TITLE="АРМ_С3000_установка_в_ОС_Windows"
 
 
@@ -31,7 +31,7 @@ mkdir -p $DEST/res || { echo ".. !mkdir DEST/res"; exit 1; }
 
 
 
-# remove comments
+# remove comments; NOTE: sed expr FAIL on fbsd - use p2.sh
 #
 # FAIL: sed -E -e 's,<!--.*?-->,,g' $SRC | less
 # https://stackoverflow.com/questions/4055837/delete-html-comment-tags-using-regexp
