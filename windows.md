@@ -2,10 +2,28 @@
 
 
 
-<!-- SS -->
-<!-- SS: <description> -->
 <!--
-    TODO Nginx => nginx
+TODO Nginx => nginx
+
+ORIG screens appearance order:
+- typical install:
+  - ports
+  - pgsql
+- advanced install:
+  - comps
+  - ports
+  - pgsql
+  - nginx
+-->
+
+<!--
+NOTE:
+- installer: pgsql 9.6
+- installer: psqlODBC_x64: 13.02
+- debian 12: pgsql 15.3
+- 9.6 for win: not supported anymore
+- s3k works OK with existing psql 16.0
+- psql port: 5432 (/etc/services)
 -->
 
 
@@ -37,8 +55,7 @@
   и в иных случаях для выделения частей текста.
 - `Моноширинный шрифт` применяется для имен файлов, команд и их параметров,
   а также для примеров выполнения и вывода команд.
-- **Примечание:**
-  краткие аннотации к основному тексту.
+- **Примечание:** - краткие аннотации к основному тексту.
 
 
 
@@ -103,21 +120,11 @@
 Здесь задается имя и пароль стандартной
 учетной записи СУБД **PostgreSQL**.
 
-Если в системе уже имеется сервер, совместимый с **АРМ С3000**,
+Если в ОС уже имеется сервер, совместимый с **АРМ С3000**,
 система будет настроена для работы с ним, - **PostgreSQL** из
 состава дистрибутива не устанавливается. В этом случае будет
 предложено задать дополнительные параметры подключения:
 сетевой адрес и порт.
-
-<!--
-NOTE:
-- installer: pgsql 9.6
-- installer: psqlODBC_x64: 13.02
-- debian 12: pgsql 15.3
-- 9.6 for win: not supported anymore
-- s3k works OK with existing psql 16.0
-- psql port: 5432 (/etc/services)
--->
 
 
 
