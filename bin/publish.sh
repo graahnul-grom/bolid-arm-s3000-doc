@@ -14,7 +14,7 @@ TITLE="arm_s3000_quick_start"
 # TITLE="arm_s3000_docker_windows"
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
 
-# NAME=win
+# NAME=windows
 # TITLE="arm_s3000_windows"
 # TITLE="АРМ_С3000_установка_в_ОС_Windows"
 
