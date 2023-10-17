@@ -402,10 +402,11 @@ usbserial       /dev/ttyUSB    188  0-511    serial
 Восстановить пароля пользователя *admin*:
 
 ```
-# docker run                                  \
-    --name arm-s3000                          \
-    --volume arm-s3000-volume:/persist        \
-    --rm arm-s3000-astra-smolensk_1.7:VERSION \
+# docker run                             \
+    --name arm-s3000                     \
+    --volume arm-s3000-volume:/persist   \
+    --rm                                 \
+    arm-s3000-astra-smolensk_1.7:VERSION \
     password-reset
 ```
 
@@ -415,10 +416,11 @@ usbserial       /dev/ttyUSB    188  0-511    serial
 Задать новый пароль *new_password* для пользователя *user_name*:
 
 ```
-# docker run                                  \
-    --name arm-s3000                          \
-    --volume arm-s3000-volume:/persist        \
-    --rm arm-s3000-astra-smolensk_1.7:VERSION \
+# docker run                             \
+    --name arm-s3000                     \
+    --volume arm-s3000-volume:/persist   \
+    --rm                                 \
+    arm-s3000-astra-smolensk_1.7:VERSION \
     password-reset -u "user_name" "new_password"
 ```
 
