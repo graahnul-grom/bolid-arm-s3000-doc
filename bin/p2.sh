@@ -38,7 +38,7 @@ mkdir -p $TMP || { echo ".. !mkdir TMP"; exit 1; }
 # remove comments
 #
 cp -a $SRC $WIP
-vim -c "source $BIN/p2_rm_comments.vim" $WIP
+vim --clean -c "source $BIN/p2_rm_comments.vim" $WIP
 cp $WIP $DEST/1-$NAME.md
 # exit $?
 
