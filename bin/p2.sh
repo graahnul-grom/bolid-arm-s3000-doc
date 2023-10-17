@@ -70,6 +70,7 @@ mk_odt()
 {
     # -f gfm \
     # -f markdown \
+    # --reference-doc=/home/dmn/s3k_ruchki_q.git/tst/odt_template_s3k.odt \
 pandoc \
     -f gfm \
     -t odt \
