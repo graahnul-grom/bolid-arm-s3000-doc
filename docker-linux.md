@@ -399,7 +399,7 @@ usbserial       /dev/ttyUSB    188  0-511    serial
 # docker stop arm-s3000
 ```
 
-Восстановить пароля пользователя *admin*:
+Восстановить пароль пользователя *admin*:
 
 ```
 # docker run                             \
