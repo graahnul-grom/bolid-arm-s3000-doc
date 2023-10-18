@@ -10,12 +10,12 @@
 # TITLE="arm_s3000_docker_linux"
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Linux"
 
-# NAME=docker-windows
-# TITLE="arm_s3000_docker_windows"
+NAME=docker-windows
+TITLE="arm_s3000_docker_windows"
 # TITLE="АРМ_С3000_установка_образов_Docker_в_ОС_Windows"
 
-NAME=windows
-TITLE="arm_s3000_windows"
+# NAME=windows
+# TITLE="arm_s3000_windows"
 # TITLE="АРМ_С3000_установка_в_ОС_Windows"
 
 
