@@ -259,6 +259,7 @@ $ sudo docker run                      \
 Команде `docker run` передаются следующие параметры:
 - `--name arm-s3000`<br />
   Произвольное имя контейнера для использования в командах `docker(1)`.
+  <!-- **TODO**: add: will use this name henceforth -->
 - `--volume arm-s3000-volume:/persist`<br />
   Имя тома, созданного командой `docker volume create`.
   `/persist` — папка в контейнере, где будет cмонтирован том.
@@ -269,6 +270,7 @@ $ sudo docker run                      \
   системе будет перенаправлено на порт, указанный после `:`, в контейнере.
 - `arm-s3000-astra-smolensk_1.7:VERSION`<br />
   Имя образа **Docker**. Про `VERSION` см. раздел «Подготовка контейнера» выше.
+  <!-- **TODO**: add ?: will use this name henceforth -->
 
 После успешного запуска контейнера соединение с системой **АРМ С3000**
 возможно на всех сетевых интерфейсах и заданных портах, например:
@@ -394,6 +396,8 @@ usbserial       /dev/ttyUSB    188  0-511    serial
 для пользователя с указанным именем учетной записи.
 
 Сначала нужно остановить контейнер (`arm-s3000` - имя контейнера):
+<!-- **TODO**: reference 'run' section HERE (m.b. in **note**)
+-->
 
 ```
 # docker stop arm-s3000
@@ -412,6 +416,8 @@ usbserial       /dev/ttyUSB    188  0-511    serial
 
 Описание параметров команды `docker run`
 приведены в разделе "Запуск контейнера".
+<!-- **TODO**: see todo few lines above
+-->
 
 Задать новый пароль *new_password* для пользователя *user_name*:
 
