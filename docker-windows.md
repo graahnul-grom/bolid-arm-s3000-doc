@@ -144,6 +144,34 @@ https://docs.docker.com/desktop/install/windows-install.
 
 
 
+## Проверка работоспособности ПО `Docker`
+
+Прежде чем приступить к работе с образами **АРМ С3000**, рекомендуется
+произвести проверку **Docker** с использованием специально предназначенного
+для этой цели контейнера `hello-world`:
+
+Убедиться в наличии подключения к сети Интернет.
+
+Выполнить команду:
+```
+$ sudo docker run hello-world
+```
+
+В случае правильной установки и настройки **Docker**, вывод должен быть таким:
+```
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete
+Digest: sha256:dcba6daec718f547568c562956fa47e1b03673dd010fe6ee58ca806767031d1c
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...
+```
+
+
+
 ## Подготовка контейнера
 
 Импортировать образ в локальный репозиторий **Docker**:
@@ -257,4 +285,83 @@ PS> .\docker-windows-run.bat
 системе, а после `:` — порт в контейнере.
 
 Номера портов на локальной системе могут принимать значения от 2048 до 65535.
+
+
+
+## Остановка и удаление контейнера
+
+Остановить контейнер:
+
+```
+# docker stop arm-s3000
+```
+
+Удалить том **Docker** (`arm-s3000-volume` — имя тома):
+
+```
+# docker volume rm arm-s3000-volume
+```
+
+Удалить образ **Docker**:
+
+```
+# docker image rm arm-s3000-astra-smolensk_1.7:VERSION
+```
+
+
+
+## Восстановление и сброс паролей
+
+В случае утери пароля для встроенной учетной записи,
+а также при необходимости изменения паролей других
+пользователей без использования web-интерфейса,
+используется команда `password-reset`, запускаемая
+в контейнере.
+
+Вызванная без параметров, она восстанавливает пароль
+по умолчанию (*armS3000*) для пользователя *admin*.
+
+При вызове с ключом `-u` команда меняет пароль
+для пользователя с указанным именем учетной записи.
+
+Сначала нужно остановить контейнер (`arm-s3000` - имя контейнера):
+<!-- **TODO**: reference 'run' section HERE (m.b. in **note**)
+-->
+
+```
+# docker stop arm-s3000
+```
+
+Восстановить пароль пользователя *admin*:
+
+```
+# docker run                             \
+    --name arm-s3000                     \
+    --volume arm-s3000-volume:/persist   \
+    --rm                                 \
+    arm-s3000-astra-smolensk_1.7:VERSION \
+    password-reset
+```
+
+Описание параметров команды `docker run`
+приведены в разделе "Запуск контейнера".
+<!-- **TODO**: see todo few lines above
+-->
+
+Задать новый пароль *new_password* для пользователя *user_name*:
+
+```
+# docker run                             \
+    --name arm-s3000                     \
+    --volume arm-s3000-volume:/persist   \
+    --rm                                 \
+    arm-s3000-astra-smolensk_1.7:VERSION \
+    password-reset -u "user_name" "new_password"
+```
+
+**Примечание:**<br />
+Если пользователь с именем, переданным команде, не существует,
+он будет создан; *роль* новой учетной записи - `service`.
+
+При последующем запуске контейнера вступят в действие новые пароли.
 
