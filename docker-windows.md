@@ -154,7 +154,7 @@ https://docs.docker.com/desktop/install/windows-install.
 
 Выполнить команду:
 ```
-$ sudo docker run hello-world
+PS> sudo docker run hello-world
 ```
 
 В случае правильной установки и настройки **Docker**, вывод должен быть таким:
@@ -293,19 +293,19 @@ PS> .\docker-windows-run.bat
 Остановить контейнер:
 
 ```
-# docker stop arm-s3000
+PS> docker stop arm-s3000
 ```
 
 Удалить том **Docker** (`arm-s3000-volume` — имя тома):
 
 ```
-# docker volume rm arm-s3000-volume
+PS> docker volume rm arm-s3000-volume
 ```
 
 Удалить образ **Docker**:
 
 ```
-# docker image rm arm-s3000-astra-smolensk_1.7:VERSION
+PS> docker image rm arm-s3000-astra-smolensk_1.7:VERSION
 ```
 
 
@@ -329,17 +329,19 @@ PS> .\docker-windows-run.bat
 -->
 
 ```
-# docker stop arm-s3000
+PS> docker stop arm-s3000
 ```
 
+Как и ранее, команды можно поместить в файлы `bat`.
 Восстановить пароль пользователя *admin*:
 
 ```
-# docker run                             \
-    --name arm-s3000                     \
-    --volume arm-s3000-volume:/persist   \
-    --rm                                 \
-    arm-s3000-astra-smolensk_1.7:VERSION \
+@echo off
+docker run ^
+    --name arm-s3000 ^
+    --volume arm-s3000-volume:/persist ^
+    --rm ^
+    arm-s3000-astra-smolensk_1.7:VERSION ^
     password-reset
 ```
 
@@ -351,11 +353,12 @@ PS> .\docker-windows-run.bat
 Задать новый пароль *new_password* для пользователя *user_name*:
 
 ```
-# docker run                             \
-    --name arm-s3000                     \
-    --volume arm-s3000-volume:/persist   \
-    --rm                                 \
-    arm-s3000-astra-smolensk_1.7:VERSION \
+@echo off
+docker run ^
+    --name arm-s3000 ^
+    --volume arm-s3000-volume:/persist ^
+    --rm ^
+    arm-s3000-astra-smolensk_1.7:VERSION ^
     password-reset -u "user_name" "new_password"
 ```
 
